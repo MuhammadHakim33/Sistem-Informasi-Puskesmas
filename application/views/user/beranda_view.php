@@ -5,7 +5,7 @@
     </figure>
 
     <!-- Navigation Feature -->
-    <nav id="link" class="section">
+    <nav id="nav-features" class="section" role="navigation">
         <div class="columns is-multiline is-mobile is-variable is-2">
             <div class="column">
                 <a href="">
@@ -27,4 +27,37 @@
             </div>
         </div>
     </nav>
+
+    <!-- Tracker -->
+    <section id="tracker" class="section">
+        <div class="columns is-multiline is-variable is-2">
+            <div class="column is-12">
+                <h5>Kasus Covid-19 di Indonesia</h5>
+            </div>
+            <div class="column is-12">
+                <div class="box has-text-centered">
+                    <p>Terkonfirmasi</p>
+                    <h4>3.224.997</h4>
+                </div>
+            </div>
+            <div class="column is-12">
+                <div class="box has-text-centered">
+                    <p class="text-body-1">Dalam Perawatan</p>
+                    <h4>3.224.997</h4>
+                </div>
+            </div>
+            <div class="column is-12">
+                <div class="box has-text-centered">
+                    <p class="text-body-1">Sembuh</p>
+                    <h4>3.224.997</h4>
+                </div>
+            </div>
+            <div class="column is-12">
+                <div class="box has-text-centered">
+                    <p class="text-body-1">Meninggal</p>
+                    <h4>3.224.997</h4>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>

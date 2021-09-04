@@ -25,13 +25,13 @@
 
                 <div id="navbarBasicExample" class="navbar-menu">
                     <div class="navbar-start">
-                        <a class="navbar-item text-body-head" href="">Beranda</a>
-                        <a class="navbar-item text-body-head" href="">Char Dokter</a>
-                        <a class="navbar-item text-body-head" href="">Daftar Layanan</a>
-                        <a class="navbar-item text-body-head" href="">Daftar Pasien Baru</a>
-                        <a class="navbar-item text-body-head" href="">Panggil Ambulan</a>
-                        <a class="navbar-item text-body-head" href="">Kebijakan Privasi</a>
-                        <a class="navbar-item text-body-head" href="">Tentang Kami</a>
+                        <a class="navbar-item" href=""><h6>Beranda</h6></a>
+                        <a class="navbar-item" href=""><h6>Char Dokter</h6></a>
+                        <a class="navbar-item" href=""><h6>Daftar Layanan</h6></a>
+                        <a class="navbar-item" href=""><h6>Daftar Pasien Baru</h6></a>
+                        <a class="navbar-item" href=""><h6>Panggil Ambulan</h6></a>
+                        <a class="navbar-item" href=""><h6>Kebijakan Privasi</h6></a>
+                        <a class="navbar-item" href=""><h6>Tentang Kami</h6></a>
                     </div>
                 </div>
             </div>
