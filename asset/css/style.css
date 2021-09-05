@@ -52,7 +52,9 @@ main .section:first-child {
 }
 #header,
 #nav-features a,
-#kontak .button {
+#kontak .button,
+.daftar,
+#form .button-next {
     box-shadow: 0px 0px 16px rgba(0, 0, 0, .15);
 }
 #nav-features a,
@@ -62,10 +64,13 @@ main .section:first-child {
 #kontak .card,
 #kontak .button,
 #list-dokter .card,
-#list-dokter .card .img {
+#list-dokter .card .img,
+.daftar #title .steps span,
+#form .list-layanan .item label,
+#form .button,
+#form .data-pasien .item input {
     border-radius: 3px;
 }
-
 
 
 /* Navbar */
@@ -110,6 +115,15 @@ main .section:first-child {
 }
 #breadcrumb ul a {
     color: var(--hijau-tua);
+}
+
+
+/* page Header */
+#page-header {
+    padding: 1rem !important;
+}
+#page-header #title {
+    color: black;
 }
 
 
@@ -226,13 +240,7 @@ main .section:first-child {
 
 /* Halaman Konsultasi */
 /* Header */
-#page-header {
-    padding: 1rem !important;
-}
-#page-header #title {
-    color: black;
-}
-#page-header #title p {
+.konsul #title p {
     opacity: .6;
     margin-top: .25rem;
 }
@@ -258,6 +266,141 @@ main .section:first-child {
     margin-right: 1rem;
 }
 
+
+
+/* Halaman Daftar Layanan */
+/* Header */
+.daftar {
+    background-color: white;
+}
+.daftar #title .wrapper,
+.daftar #title .steps {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.daftar #title .wrapper a h6 {
+    margin-left: .5rem;
+    color: var(--hijau-tua);
+}
+.daftar #title .steps span {
+    display: block;
+    height: 5px;
+    width: 50%;
+    background-color: var(--hijau-utama);
+    margin-top: 1rem;
+}
+.daftar #title .steps span:last-child {
+    margin-left: 1rem;
+    opacity: .1;
+}
+
+/* Form */
+#form {
+    color: black;
+}
+#form .active {
+    display: block !important;
+}
+#form .button {
+    height: 44px;
+}
+#form .button-next,
+#form .button-submit {
+    background-color: var(--hijau-tua);
+    color: white;
+}
+#form .single-button,
+#form .duo-button {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+}
+#form .single-button .button {
+    width: 100%;
+}
+#form .duo-button .button {
+    width: 50%;
+}
+#form .duo-button .button-prev {
+    margin-right: 1rem;
+    background-color: transparent;
+    border: none;
+    color: var(--hijau-tua);
+}
+
+/* List Layanan */
+#form .wrapper {
+    display: none;
+}
+#form .list-layanan .item input {
+    display: none;
+}
+#form .list-layanan .item label {
+    color: inherit;
+    display: block;
+    padding: 1rem;
+    background-color: white;
+    --hijau-tua-trans: rgba(20,108,76,.2);
+    border: 1px solid var(--hijau-tua-trans);
+    margin: 1rem 0;
+    position: relative;
+}
+#form .list-layanan .item label .dot {
+    height: 16px;
+    width: 16px;
+    border-radius: 100px;
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translate(0, -50%);
+    background-color: rgba(0, 0, 0, .1);
+}
+#form .list-layanan .item label .dot::before {
+    content: '';
+    display: block;
+    height: 8px;
+    width: 8px;
+    border-radius: 100px;
+    background-color: var(--hijau-tua) ;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    opacity: 0;
+}
+#form .list-layanan .item input:checked ~ label {
+    background-color: var(--hijau-tua-trans) ;
+    border-color:var(--hijau-tua);
+}
+#form .list-layanan .item input:checked ~ label .dot {
+    background-color: white;
+}
+#form .list-layanan .item input:checked ~ label .dot::before {
+    opacity: 1;
+}
+
+/* Data Pasien */
+#form .data-pasien .item {
+    display: flex;
+    flex-direction: column;
+}
+#form .data-pasien .item:not(:first-child) {
+    margin-top: 1rem;
+}
+#form .data-pasien .item input {
+    margin-top: .5rem;
+    height: 44px;
+    padding: .8rem;
+    font-size: 1rem;
+}
+#form .data-pasien .item input:focus,
+#form .data-pasien .item input:active {
+    border-color: var(--hijau-tua);
+}
 
 
 /* Responsive */

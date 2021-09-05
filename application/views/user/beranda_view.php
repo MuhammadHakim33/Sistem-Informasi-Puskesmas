@@ -20,7 +20,7 @@
                 </a>
             </div>
             <div class="column">
-                <a href="">
+                <a href="<?= base_url('daftar') ?>">
                     <div class="box icon"><i class="ri-dossier-line ri-lg"></i></div>
                     <p class="text-body-2">Daftar Layanan</p>
                 </a>
