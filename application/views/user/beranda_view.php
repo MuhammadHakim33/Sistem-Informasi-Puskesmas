@@ -14,7 +14,7 @@
                 </a>
             </div>
             <div class="column">
-                <a href="">
+                <a href="<?= base_url('konsultasi') ?>">
                     <div class="box icon"><i class="ri-message-2-line ri-lg"></i></i></div>
                     <p class="text-body-2">Konsultasi Gratis</p>
                 </a>
