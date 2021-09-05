@@ -110,4 +110,17 @@
             </nav>
         </div>
     </section>
+
+    <!-- kontak -->
+    <section id="kontak" class="section">
+        <div class="card">
+            <div class="card-content has-text-centered">
+                <h6>Butuh Bantuan kami ?</h6>
+                <a href="" class="button">
+                    <i class="ri-whatsapp-line ri-lg"></i>
+                    &ensp;<p>Hubungi Kami Sekarang</p>
+                </a>
+            </div>
+        </div>
+    </section>
 </main>
