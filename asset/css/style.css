@@ -4,9 +4,8 @@
     font-size: 16px;
     font-family: 'Inter', sans-serif;
     --hijau-utama: rgba(29,154,108,1);
-    --hijau-utama-trans: rgba(29,154,108,.1);
     --hijau-tua: rgba(20,108,76,1);
-    --hijau-tua-trans: rgba(29,154,108,.1);
+    --hijau-tua-trans: rgba(29,154,108,.08);
 }
 h4 {
     font-weight: 700 !important;
@@ -28,8 +27,8 @@ p {
 }
 .text-body-2 {
     font-weight: 400;
-    line-height: 150%;
-    font-size: 0.9rem ;
+    line-height: 150% !important;
+    font-size: 0.9rem !important;
 }
 body {
     background-color: #F7F7F7 !important;
@@ -55,7 +54,8 @@ main .section:first-child {
 }
 #nav-features a,
 #nav-features a .box,
-#tracker .column .box {
+#tracker .column .box,
+#artikel .card {
     border-radius: 3px;
 }
 
@@ -69,6 +69,7 @@ main .section:first-child {
     top: 0;
     right: 0;
     left: 0;
+    z-index: 9;
 }
 #header .navbar {
     background-color: var(--hijau-utama);
@@ -118,7 +119,7 @@ main .section:first-child {
     padding: 1rem;
     margin-bottom: 1rem;
     color: white;
-    --hijau-tua-trans: rgba(20, 108, 76, .8);
+    --hijau-tua-trans: rgba(20, 108, 76, .5);
     background: var(--hijau-tua-trans);
 }
 
@@ -143,9 +144,63 @@ main .section:first-child {
     color: #D50000;
 }
 
+/* Artikel Kesehatan */
+#artikel .swiper {
+    width: 100%;
+    height: 100%;
+}
+#artikel .card {
+    width: 60%;
+    display: block;
+    color: black;
+    box-shadow: none;
+}
+#artikel .card:hover .content h6 {
+    text-decoration: underline;
+}
+#artikel .card .card-image{
+    height: 200px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#artikel .card .card-content {
+    padding: 1rem;
+}
+#artikel .card .card-footer {
+    display: flex;
+    align-items: center;
+    border: none;
+}
+#artikel .card .card-content .tag-kategori {
+    background-color: var(--hijau-tua-trans);
+    color: var(--hijau-utama);
+    margin-right: 1rem;
+}
+#artikel .card .card-footer p {
+    opacity: .6;
+}
+#artikel .navigation a {
+    display: flex;
+    align-items: center;
+    color: var(--hijau-tua);
+    width: 40%;
+}
+#artikel .navigation a h6 {
+    margin-right: .5rem;
+    transition: .1s linear;
+}
+#artikel .navigation a:hover h6 {
+    margin-right: 1rem;
+}
+
 
 
 /* Responsive */
 @media only screen and (max-width: 600px) {
-
+    /* Artikel Kesehatan */
+    #artikel .swiper-slide {
+        width: 80%;
+    }
 }

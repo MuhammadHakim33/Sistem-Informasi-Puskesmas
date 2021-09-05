@@ -31,6 +31,7 @@
     <!-- Tracker -->
     <section id="tracker" class="section">
         <div class="columns is-multiline is-variable is-2">
+            <!-- Title -->
             <div class="column is-12">
                 <h5>Kasus Covid-19 di Indonesia</h5>
             </div>
@@ -58,6 +59,55 @@
                     <h4>3.224.997</h4>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Artikel Berita -->
+    <section id="artikel" class="section">
+        <div class="columns is-multiline is-variable is-2">
+            <!-- Title -->
+            <div class="column is-12">
+                <h5>Artikel Kesehatan</h5>
+            </div>
+            <!-- Artikel List -->
+            <div class="column is-12">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <!-- Item -->
+                        <a href="" class="swiper-slide card" role="article" target="_blank">
+                            <div class="card-image" style="background-image: url('https://bulma.io/images/placeholders/1280x960.png');"></div>
+                            <div class="card-content">
+                                <div class="content ">
+                                    <h6> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab expedita</h6>
+                                    <footer class="card-footer">
+                                        <span class="tag tag-kategori text-body-2">Covid-19</span>
+                                        <p class="text-body-2"> CNN </p>
+                                    </footer>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="" class="swiper-slide card" role="article" target="_blank">
+                            <div class="card-image" style="background-image: url('https://bulma.io/images/placeholders/1280x960.png');"></div>
+                            <div class="card-content">
+                                <div class="content ">
+                                    <h6> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab expedita</h6>
+                                    <footer class="card-footer">
+                                        <span class="tag tag-kategori is-small text-body-2">Covid-19</span>
+                                        <p class="text-body-2"> CNN </p>
+                                    </footer>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Nav -->
+            <nav class="column is-12 navigation">
+                <a href="" target="_blank">
+                    <h6>Lihat Semua</h6>
+                    <i class="ri-arrow-right-s-line ri-lg"></i>
+                </a>
+            </nav>
         </div>
     </section>
 </main>
