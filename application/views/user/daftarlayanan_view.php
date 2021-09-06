@@ -12,7 +12,7 @@
         <section id="title">
            <div class="wrapper">
                 <h5>Daftar Layanan</h5>
-                <a href="" class="button is-white">
+                <a href="<?= base_url('daftar/pasien_baru') ?>" class="button is-white">
                     <i class="ri-add-line ri-1x"></i>
                     <h6>Pasien Baru</h6>
                 </a>
@@ -31,16 +31,16 @@
             <p>Jenis Layanan</p>
             <!-- Item -->
             <div class="item">
-                <input type="radio" name="layanan" id="gigi" required>
-                <label for="gigi">
+                <input type="radio" name="layanan" id="gigi" value="gigi" required>
+                <label for="gigi" class="form-check-label">
                     <span class="dot"></span>
                     <h6>Gigi</h6>
                     <p class="text-body-2">Pemeriksaan dan penyembuhan gigi.</p>
                 </label>
             </div>
             <div class="item">
-                <input type="radio" name="layanan" id="umum" required>
-                <label for="umum">
+                <input type="radio" name="layanan" id="umum" value="umum" required>
+                <label for="umum" class="form-check-label">
                     <span class="dot"></span>
                     <h6>Umum</h6>
                     <p class="text-body-2">Sakit dengan gejala umum.</p>

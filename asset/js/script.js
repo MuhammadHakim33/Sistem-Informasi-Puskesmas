@@ -19,7 +19,6 @@ $(document).ready(function() {
         $(this).parent().parent().next().addClass('active');
         $('.step-2').css('opacity','1');
     });
-    
     $('.button-prev').click(function(){
         $(this).parent().parent().removeClass('active');
         $(this).parent().parent().prev().addClass('active');

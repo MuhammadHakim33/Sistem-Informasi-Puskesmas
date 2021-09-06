@@ -10,4 +10,13 @@ class Daftar extends CI_Controller {
 		$this->load->view('user/daftarlayanan_view');
 		$this->load->view('templates/footer_view');
 	}
+
+	public function pasien_baru()
+	{
+		$data["title"] = "Daftar Pasien Baru";
+		
+		$this->load->view('templates/header_view', $data);
+		$this->load->view('user/daftarpasienbaru_view');
+		$this->load->view('templates/footer_view');
+	}
 }

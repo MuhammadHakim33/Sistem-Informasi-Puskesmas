@@ -66,9 +66,9 @@ main .section:first-child {
 #list-dokter .card,
 #list-dokter .card .img,
 .daftar #title .steps span,
-#form .list-layanan .item label,
+#form .wrapper .item label,
 #form .button,
-#form .data-pasien .item input {
+#form .wrapper .item input {
     border-radius: 3px;
 }
 
@@ -299,9 +299,14 @@ main .section:first-child {
 #form {
     color: black;
 }
+#form .wrapper {
+    display: none;
+}
 #form .active {
     display: block !important;
 }
+
+/* Form Button */
 #form .button {
     height: 44px;
 }
@@ -333,14 +338,11 @@ main .section:first-child {
     color: var(--hijau-tua);
 }
 
-/* List Layanan */
-#form .wrapper {
+/* Input Radio */
+#form .item input[type=radio] {
     display: none;
 }
-#form .list-layanan .item input {
-    display: none;
-}
-#form .list-layanan .item label {
+#form .item .form-check-label {
     color: inherit;
     display: block;
     padding: 1rem;
@@ -350,7 +352,7 @@ main .section:first-child {
     margin: 1rem 0;
     position: relative;
 }
-#form .list-layanan .item label .dot {
+#form .item .form-check-label .dot {
     height: 16px;
     width: 16px;
     border-radius: 100px;
@@ -360,7 +362,7 @@ main .section:first-child {
     transform: translate(0, -50%);
     background-color: rgba(0, 0, 0, .1);
 }
-#form .list-layanan .item label .dot::before {
+#form .item .form-check-label .dot::before {
     content: '';
     display: block;
     height: 8px;
@@ -372,33 +374,33 @@ main .section:first-child {
     left: 4px;
     opacity: 0;
 }
-#form .list-layanan .item input:checked ~ label {
+#form .item input:checked ~ .form-check-label {
     background-color: var(--hijau-tua-trans) ;
     border-color:var(--hijau-tua);
 }
-#form .list-layanan .item input:checked ~ label .dot {
+#form .item input:checked ~ .form-check-label .dot {
     background-color: white;
 }
-#form .list-layanan .item input:checked ~ label .dot::before {
+#form .item input:checked ~ .form-check-label .dot::before {
     opacity: 1;
 }
 
-/* Data Pasien */
+/* Form Input */
 #form .data-pasien .item {
     display: flex;
     flex-direction: column;
 }
-#form .data-pasien .item:not(:first-child) {
+#form .wrapper .item:not(:first-child) {
     margin-top: 1rem;
 }
-#form .data-pasien .item input {
+#form .wrapper .item input {
     margin-top: .5rem;
     height: 44px;
     padding: .8rem;
     font-size: 1rem;
 }
-#form .data-pasien .item input:focus,
-#form .data-pasien .item input:active {
+#form .wrapper .item input:focus,
+#form .wrapper .item input:active {
     border-color: var(--hijau-tua);
 }
 
