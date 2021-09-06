@@ -3,6 +3,7 @@
 :root {
     font-size: 16px;
     font-family: 'Inter', sans-serif;
+    background-color: #F7F7F7 !important;
     --hijau-utama: rgba(29,154,108,1);
     --hijau-tua: rgba(20,108,76,1);
     --hijau-tua-trans: rgba(29,154,108,.08);
@@ -30,16 +31,9 @@ p {
     line-height: 150% !important;
     font-size: 0.9rem !important;
 }
-body {
-    background-color: #F7F7F7 !important;
-}
 main {
     max-width: 550px;
-    margin: 0 auto;
-    min-height: calc(100vh - 70px);
-}
-main .section:first-child {
-    margin-top: 70px;
+    margin: 70px auto 0;
 }
 .section {
     padding: 24px 16px !important;
@@ -54,7 +48,8 @@ main .section:first-child {
 #nav-features a,
 #kontak .button,
 .daftar,
-#form .button-next {
+#form .button-next,
+#summary-daftar {
     box-shadow: 0px 0px 16px rgba(0, 0, 0, .15);
 }
 #nav-features a,
@@ -68,8 +63,16 @@ main .section:first-child {
 .daftar #title .steps span,
 #form .wrapper .item label,
 #form .button,
-#form .wrapper .item input {
+#form .wrapper .item input,
+#summary-daftar {
     border-radius: 3px;
+}
+hr {
+    margin: .5rem 0 !important;
+    display: block ;
+    height: 3px ;
+    width: 100% ;
+    background-color: rgba(0, 0, 0, .1) !important;
 }
 
 
@@ -203,7 +206,8 @@ main .section:first-child {
     align-items: center;
     border: none;
 }
-#artikel .card .card-content .tag-kategori {
+#artikel .tag-kategori,
+#summary-daftar .tag-kategori {
     background-color: var(--hijau-tua-trans);
     color: var(--hijau-utama);
     margin-right: 1rem;
@@ -268,7 +272,7 @@ main .section:first-child {
 
 
 
-/* Halaman Daftar Layanan */
+/* Halaman Daftar */
 /* Header */
 .daftar {
     background-color: white;
@@ -298,6 +302,7 @@ main .section:first-child {
 /* Form */
 #form {
     color: black;
+    padding-bottom: 0 !important;
 }
 #form .wrapper {
     display: none;
@@ -307,35 +312,34 @@ main .section:first-child {
 }
 
 /* Form Button */
-#form .button {
+#grup-button .button {
     height: 44px;
 }
-#form .button-next,
-#form .button-submit {
+#grup-button .button-main {
     background-color: var(--hijau-tua);
     color: white;
 }
-#form .single-button,
-#form .duo-button {
-    position: relative;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin-top: 2rem;
+#grup-button .button-second {
+    margin-right: 1rem;
+    background-color: transparent;
+    border: none;
+    color: var(--hijau-tua);
+}
+#form .horizontal-position {
+    margin: 1.5rem 0;
     display: flex;
     flex-direction: row;
+}
+.vertical-position {
+    margin: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
 }
 #form .single-button .button {
     width: 100%;
 }
 #form .duo-button .button {
     width: 50%;
-}
-#form .duo-button .button-prev {
-    margin-right: 1rem;
-    background-color: transparent;
-    border: none;
-    color: var(--hijau-tua);
 }
 
 /* Input Radio */
@@ -402,6 +406,60 @@ main .section:first-child {
 #form .wrapper .item input:focus,
 #form .wrapper .item input:active {
     border-color: var(--hijau-tua);
+}
+
+
+
+/* Halaman Daftar Sukses */
+/* HEader */
+#sukses-icon {
+    color: white;
+    background-color: var(--hijau-utama);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    margin: 0 auto 2rem;
+}
+#sukses-icon::before {
+    content: "";
+    height: 100px;
+    width: 100px;
+    background-color: var(--hijau-tua-trans);
+    position: absolute;
+    border-radius: 100%;
+}
+.daftar-sukses .text {
+    color: black;
+}
+.daftar-sukses .text p {
+    opacity: .8;
+    margin-top: .5rem;
+}
+
+/* Summary Pesan */
+#summary-daftar {
+    margin: 2rem 1rem;
+    padding: 1.5rem !important;
+    background-color: white;
+}
+#summary-daftar .columns .column {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 0;
+}
+#summary-daftar .columns .column h6 {
+    opacity: .8;
+}
+#summary-daftar .columns .column p {
+    margin: 0;
+    color: var(--hijau-utama);
+}
+#grup-button {
+    margin: 0;
 }
 
 

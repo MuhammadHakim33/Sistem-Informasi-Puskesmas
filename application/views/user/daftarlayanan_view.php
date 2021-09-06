@@ -55,8 +55,8 @@
             </div>
 
             <!-- Button -->
-            <div class="single-button">
-                <button type="button" class="button button-next">Masukan Data Pasien</button>
+            <div id="grup-button" class="single-button horizontal-position">
+                <button type="button" class="button button-next button-main">Masukan Data Pasien</button>
             </div>
         </div>
 
@@ -76,9 +76,9 @@
             </div>
 
             <!-- Button -->
-            <div class="duo-button">
-                <button type="button" class="button button-prev">Sebelumnya</button>
-                <button type="submit" class="button button-submit">Daftar</button>
+            <div id="grup-button" class="duo-button horizontal-position">
+                <button type="button" class="button button-prev button-second">Sebelumnya</button>
+                <button type="submit" class="button button-submit button-main">Daftar</button>
             </div>
         </div>
     </form>

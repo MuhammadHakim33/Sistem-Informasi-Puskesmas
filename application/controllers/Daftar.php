@@ -7,6 +7,7 @@ class Daftar extends CI_Controller {
 		$data["title"] = "Daftar Layanan";
 		
 		$this->load->view('templates/header_view', $data);
+		$this->load->view('templates/navigation_view');
 		$this->load->view('user/daftarlayanan_view');
 		$this->load->view('templates/footer_view');
 	}
@@ -16,6 +17,7 @@ class Daftar extends CI_Controller {
 		$data["title"] = "Daftar Pasien Baru";
 		
 		$this->load->view('templates/header_view', $data);
+		$this->load->view('templates/navigation_view');
 		$this->load->view('user/daftarpasienbaru_view');
 		$this->load->view('templates/footer_view');
 	}
