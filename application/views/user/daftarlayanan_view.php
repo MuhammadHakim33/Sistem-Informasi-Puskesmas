@@ -22,6 +22,13 @@
                <span class="step-2"></span>
            </div>
         </section>
+
+        <!-- Alert -->
+        <article class="message is-danger mt-5">
+            <div class="message-body p-4">
+                Isi Semua Field. 
+            </div>
+        </article>
     </header>
 
     <!-- Form -->
