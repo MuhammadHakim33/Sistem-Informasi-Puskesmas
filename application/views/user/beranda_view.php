@@ -1,7 +1,7 @@
-<main>
+<main id="beranda-page">
     <!--Banner  -->
     <figure id="banner" class="section" role="banner">
-        <img src="<?= base_url('asset/img/banner.png') ?>" alt="" width="600" height="300">
+        <img src="<?= base_url('asset/img/banner.png') ?>" alt="">
     </figure>
 
     <!-- Navigation Feature -->
@@ -103,7 +103,7 @@
             </div>
             <!-- Nav -->
             <nav class="column is-12 navigation">
-                <a href="" target="_blank">
+                <a href="<?= base_url('artikel') ?>">
                     <h6>Lihat Semua</h6>
                     <i class="ri-arrow-right-s-line ri-lg"></i>
                 </a>

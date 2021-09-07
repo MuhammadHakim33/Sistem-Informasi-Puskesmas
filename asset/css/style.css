@@ -134,9 +134,11 @@ hr {
 /* Halaman Beranda */
 /* Banner */
 #banner {
-    max-width: 100%;
-    height: auto;
     padding: 0 !important;
+}
+#banner img {
+    max-width: 100%;
+    width: 550px;
 }
 
 /* Navigation Features */
@@ -239,6 +241,16 @@ hr {
     color: white;
     padding: 16px;
 }   
+
+
+
+/* Halaman Artikel Kesehatan */
+#artikel-page #artikel .card {
+    width: 100%;
+}
+#artikel .card .card-image{
+    height: 250px;
+}
 
 
 
