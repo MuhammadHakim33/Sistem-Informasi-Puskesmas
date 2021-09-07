@@ -7,22 +7,28 @@
     <!-- Navigation Feature -->
     <nav id="nav-features" class="section" role="navigation">
         <div class="columns is-multiline is-mobile is-variable is-2">
-            <div class="column">
+            <div class="column is-6">
                 <a href="">
                     <div class="box icon"><i class="ri-taxi-line ri-lg"></i></div>
                     <p class="text-body-2">Panggil Ambulan</p>
                 </a>
             </div>
-            <div class="column">
+            <div class="column is-6">
                 <a href="<?= base_url('konsultasi') ?>">
                     <div class="box icon"><i class="ri-message-2-line ri-lg"></i></i></div>
                     <p class="text-body-2">Konsultasi Gratis</p>
                 </a>
             </div>
-            <div class="column">
+            <div class="column is-6">
                 <a href="<?= base_url('daftar') ?>">
                     <div class="box icon"><i class="ri-dossier-line ri-lg"></i></div>
                     <p class="text-body-2">Daftar Layanan</p>
+                </a>
+            </div>
+            <div class="column is-6">
+                <a href="<?= base_url('pendaftaransaya') ?>">
+                    <div class="box icon"><i class="ri-search-line ri-lg"></i></div>
+                    <p class="text-body-2">Pendaftaran Saya</p>
                 </a>
             </div>
         </div>
