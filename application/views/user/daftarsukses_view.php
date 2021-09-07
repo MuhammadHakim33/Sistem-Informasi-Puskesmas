@@ -40,7 +40,7 @@
     </section>
 
     <section id="grup-button" class="section vertical-position">
-        <a href="" class="button button-main mb-4">Beranda</a>
+        <a href="<?= base_url() ?>" class="button button-main mb-4">Beranda</a>
         <a href="" class="button button-second"><i class="ri-file-line"></i>&nbsp;Cetak PDF</a>
     </section>
 
