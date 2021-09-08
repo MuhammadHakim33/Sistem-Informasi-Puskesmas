@@ -44,25 +44,25 @@
             <div class="column is-12">
                 <div class="box has-text-centered">
                     <p>Terkonfirmasi</p>
-                    <h4>3.224.997</h4>
+                    <h4><?= $api_covid[0]["positif"]; ?></h4>
                 </div>
             </div>
             <div class="column is-12">
                 <div class="box has-text-centered">
                     <p class="text-body-1">Dalam Perawatan</p>
-                    <h4>3.224.997</h4>
+                    <h4><?= $api_covid[0]["dirawat"]; ?></h4>
                 </div>
             </div>
             <div class="column is-12">
                 <div class="box has-text-centered">
                     <p class="text-body-1">Sembuh</p>
-                    <h4>3.224.997</h4>
+                    <h4><?= $api_covid[0]["sembuh"]; ?></h4>
                 </div>
             </div>
             <div class="column is-12">
                 <div class="box has-text-centered">
                     <p class="text-body-1">Meninggal</p>
-                    <h4>3.224.997</h4>
+                    <h4><?= $api_covid[0]["meninggal"]; ?></h4>
                 </div>
             </div>
         </div>
@@ -80,30 +80,20 @@
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
                         <!-- Item -->
-                        <a href="" class="swiper-slide card" role="article" target="_blank">
-                            <div class="card-image" style="background-image: url('https://bulma.io/images/placeholders/1280x960.png');"></div>
-                            <div class="card-content">
-                                <div class="content ">
-                                    <h6> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab expedita</h6>
-                                    <footer class="card-footer">
-                                        <span class="tag tag-kategori text-body-2">Covid-19</span>
-                                        <p class="text-body-2"> CNN </p>
-                                    </footer>
+                        <?php for($i = 0; $i < 5; $i++): ?>
+                            <a href="<?= $api_berita[$i]['link'] ?>" class="swiper-slide card" role="article" target="_blank">
+                                <figure class="card-image" style="background-image: url('<?= $api_berita[$i]['thumbnail'] ?>');">
+                                </figure>
+                                <div class="card-content">
+                                    <div class="content ">
+                                        <h6><?= $api_berita[$i]['title'] ?></h6>
+                                        <footer class="card-footer">
+                                            <span class="tag tag-kategori text-body-2">CNN</span>
+                                        </footer>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
-                        <a href="" class="swiper-slide card" role="article" target="_blank">
-                            <div class="card-image" style="background-image: url('https://bulma.io/images/placeholders/1280x960.png');"></div>
-                            <div class="card-content">
-                                <div class="content ">
-                                    <h6> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab expedita</h6>
-                                    <footer class="card-footer">
-                                        <span class="tag tag-kategori is-small text-body-2">Covid-19</span>
-                                        <p class="text-body-2"> CNN </p>
-                                    </footer>
-                                </div>
-                            </div>
-                        </a>
+                            </a>
+                        <?php endfor; ?>
                     </div>
                 </div>
             </div>
