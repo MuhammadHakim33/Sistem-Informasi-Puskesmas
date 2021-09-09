@@ -73,7 +73,7 @@
         <div class="columns is-multiline is-variable is-2">
             <!-- Title -->
             <div class="column is-12">
-                <h5>Artikel Kesehatan</h5>
+                <h5>Artikel Gaya Hidup</h5>
             </div>
             <!-- Artikel List -->
             <div class="column is-12">
