@@ -82,11 +82,12 @@
                         <!-- Item -->
                         <?php for($i = 0; $i < 5; $i++): ?>
                             <a href="<?= $api_berita[$i]['link'] ?>" class="swiper-slide card" role="article" target="_blank">
-                                <figure class="card-image" style="background-image: url('<?= $api_berita[$i]['thumbnail'] ?>');">
+                                <figure class="card-image" 
+                                    style="background-image: url('<?= $api_berita[$i]['thumbnail'] ?>');">
                                 </figure>
                                 <div class="card-content">
                                     <div class="content ">
-                                        <h6><?= $api_berita[$i]['title'] ?></h6>
+                                        <h6 class="title-artikel"><?= $api_berita[$i]['title'] ?></h6>
                                         <footer class="card-footer">
                                             <span class="tag tag-kategori text-body-2">CNN</span>
                                         </footer>
