@@ -18,23 +18,33 @@
                <span class="step-2"></span>
            </div>
         </section>
-    </header>
 
+        <!-- Alert -->
+        <?php if(validation_errors()) : ?>
+            <article class="message is-danger mt-5">
+                <div class="message-body p-4">
+                    <?= validation_errors(); ?>
+                </div>
+            </article>
+        <?php endif; ?>
+
+    </header>
+    
     <!-- Form -->
-    <form action="" id="form" class="section daftar-layanan">
+    <form action="" method="POST" id="form" class="section daftar-layanan">
         <!-- Identitas -->
         <div class="wrapper identitas active">
             <div class="item">
                 <label for="nik">NIK</label>
-                <input class="input" type="text" id="nik" name="nik" required>
+                <input class="input" type="text" id="nik" name="nik">
             </div>
             <div class="item">
                 <label for="nama">Nama Lengkap</label>
-                <input class="input" type="text" id="nama" name="nama" required>
+                <input class="input" type="text" id="nama" name="nama">
             </div>
             <div class="item">
-                <label for="nomor_hp">Nomor Handphone</label>
-                <input class="input" type="tel" id="nomor_hp" name="nomor_hp" required>
+                <label for="telp">Nomor Handphone</label>
+                <input class="input" type="tel" id="telp" name="telp">
             </div>
             <div class="item">
                 <p>Jenis Kelamin</p>
@@ -59,7 +69,7 @@
             </div>
             <div class="item">
                 <label for="tgl_lahir">Tanggal Lahir</label>
-                <input class="input" type="date" id="tgl_lahir" name="tgl_lahir" required>
+                <input class="input" type="date" id="tgl_lahir" name="tgl_lahir">
             </div>
 
             <!-- Button -->
@@ -72,23 +82,23 @@
         <div class="wrapper alamat">
             <div class="item">
                 <label for="alamat">Alamat</label>
-                <input class="input" type="text" id="alamat" name="alamat" required>
+                <input class="input" type="text" id="alamat" name="alamat">
             </div>
             <div class="item">
                 <label for="provinsi">Provinsi</label>
-                <input class="input" type="text" id="provinsi" name="provinsi" required>
+                <input class="input" type="text" id="provinsi" name="provinsi">
             </div>
             <div class="item">
-                <label for="kota-kab">Kota/Kabupaten</label>
-                <input class="input" type="tel" id="kota-kab" name="kota-kab" required>
+                <label for="kota_kab">Kota/Kabupaten</label>
+                <input class="input" type="text" id="kota_kab" name="kota_kab">
             </div>
             <div class="item">
-                <label for="kec">Kecamatan</label>
-                <input class="input" type="tel" id="kec" name="kec" required>
+                <label for="kecamatan">Kecamatan</label>
+                <input class="input" type="text" id="kecamatan" name="kecamatan">
             </div>
             <div class="item">
-                <label for="kel">Kel</label>
-                <input class="input" type="tel" id="kel" name="kel" required>
+                <label for="kelurahan">Kelurahan</label>
+                <input class="input" type="text" id="kelurahan" name="kelurahan">
             </div>
 
             <!-- Button -->
