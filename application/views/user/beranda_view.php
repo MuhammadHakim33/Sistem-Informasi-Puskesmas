@@ -8,7 +8,7 @@
     <nav id="nav-features" class="section" role="navigation">
         <div class="columns is-multiline is-mobile is-variable is-2">
             <div class="column is-6">
-                <a href="">
+                <a href="https://api.whatsapp.com/send?phone=62<?= $ambulan ?>" target="_blank">
                     <div class="box icon"><i class="ri-taxi-line ri-lg"></i></div>
                     <p class="text-body-2">Panggil Ambulan</p>
                 </a>
@@ -113,7 +113,7 @@
         <div class="card">
             <div class="card-content has-text-centered">
                 <h6>Butuh Bantuan kami ?</h6>
-                <a href="" class="button">
+                <a href="https://api.whatsapp.com/send?phone=62<?= $admin ?>" target="_blank" class="button">
                     <i class="ri-whatsapp-line ri-lg"></i>
                     &ensp;<p>Hubungi Kami Sekarang</p>
                 </a>

@@ -5,10 +5,13 @@ class Beranda extends CI_Controller {
 	public function index()
 	{
 		$this->load->model('Api_model');
+		$this->load->model('Kontak_model');
 		
 		$data["title"] = "Beranda";
 		$data['api_covid'] = $this->covidApi();
 		$data['api_berita'] = $this->beritaApi();
+		$data['ambulan'] = $this->Kontak_model->kontak_ambulan();
+		$data['admin'] = $this->Kontak_model->kontak_admin();
 		
 		$this->load->view('templates/header_view', $data);
 		$this->load->view('templates/navigation_view');
