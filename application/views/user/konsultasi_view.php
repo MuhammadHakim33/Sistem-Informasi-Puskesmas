@@ -20,21 +20,23 @@
     <!-- List Dokter -->
     <section id="list-dokter" class="section">
         <div class="columns is-multiline is-variable is-2">
-            <div class="column is-12">
-                <a href="" class="card">
-                    <div class="card-content">
-                        <!-- Photo -->
-                        <figure class="img" 
-                            style="background-image: url('https://bulma.io/images/placeholders/96x96.png');">
-                        </figure>
-                        <!-- Text -->
-                        <div class="text">
-                            <h6>John Smith</h6>
-                            <p>Khusus Gejala Covid-19</p>
+            <?php foreach($list_dokter as $dokter): ?>
+                <div class="column is-12">
+                    <a href="https://api.whatsapp.com/send?phone=62<?= $dokter['telp'] ?>" target="_blank" class="card">
+                        <div class="card-content">
+                            <!-- Photo -->
+                            <figure class="img">
+                                <img src="<?= base_url() ?>asset/img/<?= $dokter['foto'] ?>" alt="" srcset="">
+                            </figure>
+                            <!-- Text -->
+                            <div class="text">
+                                <h6><?= $dokter['nama'] ?></h6>
+                                <p><?= $dokter['deskripsi'] ?></p>
+                            </div>
                         </div>
-                    </div>
-                </a>
-            </div>
+                    </a>
+                </div>
+            <?php endforeach; ?>
         </div>
     </section>
 </main>

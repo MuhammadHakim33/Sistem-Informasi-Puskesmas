@@ -282,9 +282,6 @@ hr {
     width: 100%;
 }
 #list-dokter .columns .column .card .card-content .img {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     height: 60px;
     width: 60px;
     margin-right: 1rem;
