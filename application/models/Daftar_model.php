@@ -21,6 +21,52 @@ class Daftar_model extends CI_Model {
         ];
 
         $this->db->insert('tbl_pasien', $data);
-        
+    }
+
+    public function daftar_layanan() 
+    {   
+        // Create Kode Booking
+        date_default_timezone_set('Asia/Jakarta');
+        $s = date('s');
+        $H = date('H');
+        $d = date('d');
+        $m = date('m');
+        $unik = rand(1, 99);
+
+        // Variable
+        $kode_boking = $m . $d . $H . $s . $unik;
+        $layanan =  $this->input->post('layanan', true);
+        $nik =  $this->input->post('nik', true);
+        $nama =  $this->input->post('nama', true);
+        $tgl_kunjungan =  $this->input->post('tgl_kunjungan', true);
+        $no_antri = $this->createAntrian($layanan, $tgl_kunjungan);
+
+        $data = [
+            'nik_pasien' => $nik,
+            'nama_pasien' => $nama,
+            'layanan' => $layanan,
+            'no_antri' => $no_antri,
+            'kode_booking' => $kode_boking,
+            'tgl_kunjungan' => $tgl_kunjungan
+        ];
+
+        $this->db->insert('tbl_pendaftaran', $data);
+
+        // Get Pendaftaran
+        return $getPendaftaran = $this->getPendaftaran($kode_boking);
+    }
+
+    public function createAntrian($layanan, $tgl_kunjungan) 
+    {
+        $query = $this->db->get_where('tbl_pendaftaran', array('layanan' => $layanan, 'tgl_kunjungan' => $tgl_kunjungan));
+        $result = $query->result_array();
+        count($result) == 0 ? $i = 0 : $i = end($result)["no_antri"];
+        return $no_antri = $i + 1;
+    }
+
+    public function getPendaftaran($kode_boking) 
+    {
+        $query = $this->db->get_where('tbl_pendaftaran', array('kode_booking' => $kode_boking));
+        return $query->result_array();
     }
 }

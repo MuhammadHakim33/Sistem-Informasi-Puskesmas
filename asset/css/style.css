@@ -221,6 +221,8 @@ hr {
     background-color: var(--hijau-tua-trans);
     color: var(--hijau-utama);
     margin-right: 1rem;
+}
+#artikel .tag-kategori {
     position: absolute;
     bottom: 16px;
     left: 16px;

@@ -23,22 +23,24 @@
            </div>
         </section>
 
-        <!-- Alert -->
-        <article class="message is-danger mt-5">
-            <div class="message-body p-4">
-                Isi Semua Field. 
-            </div>
-        </article>
+         <!-- Alert -->
+        <?php if(validation_errors()) : ?>
+            <article class="message is-danger mt-5">
+                <div class="message-body p-4">
+                    <?= validation_errors(); ?>
+                </div>
+            </article>
+        <?php endif; ?>
     </header>
 
     <!-- Form -->
-    <form action="" id="form" class="section daftar-layanan">
+    <form action="" method="POST" id="form" class="section daftar-layanan">
         <!-- List -->
         <div class="wrapper list-layanan active">
             <p>Jenis Layanan</p>
             <!-- Item -->
             <div class="item">
-                <input type="radio" name="layanan" id="gigi" value="gigi" required>
+                <input type="radio" name="layanan" id="gigi" value="gigi">
                 <label for="gigi" class="form-check-label">
                     <span class="dot"></span>
                     <h6>Gigi</h6>
@@ -46,7 +48,7 @@
                 </label>
             </div>
             <div class="item">
-                <input type="radio" name="layanan" id="umum" value="umum" required>
+                <input type="radio" name="layanan" id="umum" value="umum">
                 <label for="umum" class="form-check-label">
                     <span class="dot"></span>
                     <h6>Umum</h6>
@@ -64,15 +66,15 @@
         <div class="wrapper data-pasien">
             <div class="item">
                 <label for="nik">NIK Pasien</label>
-                <input class="input" type="text" id="nik" name="nik" required>
+                <input class="input" type="text" id="nik" name="nik">
             </div>
             <div class="item">
                 <label for="nama">Nama Lengkap Pasien</label>
-                <input class="input" type="text" id="nama" name="nama" required>
+                <input class="input" type="text" id="nama" name="nama">
             </div>
             <div class="item">
                 <label for="tgl_kunjungan">Tanggal Kunjungan</label>
-                <input class="input" type="date" id="tgl_kunjungan" name="tgl_kunjungan" required>
+                <input class="input" type="date" id="tgl_kunjungan" name="tgl_kunjungan">
             </div>
 
             <!-- Button -->

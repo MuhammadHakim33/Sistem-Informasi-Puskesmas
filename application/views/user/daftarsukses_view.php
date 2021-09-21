@@ -1,5 +1,7 @@
 <main>
 
+    
+
     <header id="page-header" class="section daftar-sukses">
         <!-- Icon -->
         <figure id="sukses-icon" >
@@ -17,24 +19,24 @@
         <div class="columns is-multiline is-variable is-1">
             <div class="column is-12">
                 <h6>Nomor Antrian</h6>
-                <p class="tag tag-kategori is-medium">002</p>
+                <p class="tag tag-kategori is-medium"><?= $getPendaftaran[0]['no_antri']; ?></p>
             </div>
             <div class="column is-12">
                 <h6>Jenis layanan</h6>
-                <p>Umum</p>
+                <p><?= $getPendaftaran[0]['layanan']; ?></</p>
             </div>
             <div class="column is-12">
                 <h6>Hadir Pada</h6>
-                <p>30 Feb 2021</p>
+                <p><?= $getPendaftaran[0]['tgl_kunjungan']; ?></</p>
             </div>
             <hr>
             <div class="column is-12">
                 <h6>Kode Booking</h6>
-                <p>2318812</p>
+                <p><?= $getPendaftaran[0]['kode_booking']; ?></</p>
             </div>
             <div class="column is-12">
                 <h6>Tanggal Booking</h6>
-                <p>9 Feb 2021</p>
+                <p><?= $getPendaftaran[0]['tgl_booking']; ?></</p>
             </div>
         </div>
     </section>
