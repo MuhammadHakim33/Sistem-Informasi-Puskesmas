@@ -431,7 +431,7 @@ hr {
 
 /* Halaman Daftar Sukses */
 /* HEader */
-#sukses-icon {
+#icon {
     color: white;
     background-color: var(--hijau-utama);
     display: flex;
@@ -442,13 +442,19 @@ hr {
     border-radius: 100%;
     margin: 0 auto 2rem;
 }
-#sukses-icon::before {
+#icon::before {
     content: "";
     height: 100px;
     width: 100px;
     background-color: var(--hijau-tua-trans);
     position: absolute;
     border-radius: 100%;
+}
+.empty-icon {
+    background-color: #d50000 !important;
+}
+.empty-icon::before {
+    background-color: rgba(213, 0, 0, .08) !important;
 }
 .daftar-sukses .text {
     color: black;

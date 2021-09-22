@@ -4,7 +4,7 @@
 
     <header id="page-header" class="section daftar-sukses">
         <!-- Icon -->
-        <figure id="sukses-icon" >
+        <figure id="icon" class="sukses-icon" >
             <i class="ri-check-fill ri-2x"></i>
         </figure>
 

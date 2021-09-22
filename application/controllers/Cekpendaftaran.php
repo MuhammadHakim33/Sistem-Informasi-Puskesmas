@@ -20,7 +20,12 @@ class Cekpendaftaran extends CI_Controller {
 			$data['getPendaftaran'] = $this->Daftar_model->cekPendaftaran();
 			$data["title"] = "Sukses";
 			$this->load->view('templates/header_view', $data);
-			$this->load->view('user/daftarsukses_view', $data);
+
+			if(count($data['getPendaftaran']) == 0 ) {
+				$this->load->view('user/pendaftaran_tidakditemukan_view', $data);
+			} else {
+				$this->load->view('user/daftarsukses_view', $data);
+			}
 			$this->load->view('templates/footer_view');
 		}
 
