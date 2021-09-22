@@ -53,7 +53,7 @@ class Daftar_model extends CI_Model {
         $this->db->insert('tbl_pendaftaran', $data);
 
         // Get Pendaftaran
-        return $getPendaftaran = $this->getPendaftaran($kode_boking);
+        return $kode_boking;
     }
 
     public function createAntrian($layanan, $tgl_kunjungan) 

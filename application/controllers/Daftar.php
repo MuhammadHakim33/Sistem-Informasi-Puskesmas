@@ -24,7 +24,8 @@ class Daftar extends CI_Controller {
 			$this->load->view('user/daftarlayanan_view');
 			$this->load->view('templates/footer_view');;
 		} else {
-			$data['getPendaftaran'] = $this->Daftar_model->daftar_layanan();
+			$kode_booking = $this->Daftar_model->daftar_layanan();
+			$data['getPendaftaran'] = $this->Daftar_model->getPendaftaran($kode_booking);
 			$data["title"] = "Sukses";
 			$this->load->view('templates/header_view', $data);
 			$this->load->view('user/daftarsukses_view', $data);
