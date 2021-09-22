@@ -69,4 +69,15 @@ class Daftar_model extends CI_Model {
         $query = $this->db->get_where('tbl_pendaftaran', array('kode_booking' => $kode_boking));
         return $query->result_array();
     }
+
+    public function cekPendaftaran() 
+    {
+        $data = [
+            'nik_pasien' => $this->input->post('nik', true),
+            'tgl_kunjungan' => $this->input->post('tgl_kunjungan', true)
+        ];
+
+        $query = $this->db->get_where('tbl_pendaftaran', $data);
+        return $query->result_array();
+    }
 }

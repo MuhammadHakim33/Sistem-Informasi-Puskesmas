@@ -5,19 +5,19 @@
         <nav id="breadcrumb" class="breadcrumb" aria-label="breadcrumbs">
             <ul>
                 <li><a href="<?= base_url() ?>" class="text-body-2">Beranda</a></li>
-                <li><a class="text-body-2">Pendaftaran Saya</a></li>
+                <li><a class="text-body-2">Cek Pendaftaran</a></li>
             </ul>
         </nav>
         <!-- Title -->
         <section id="title">
            <div class="wrapper">
-                <h5>Pendaftaran Saya</h5>
+                <h5>Cek Pendaftaran</h5>
            </div>
         </section>
     </header>
 
     <!-- Form -->
-    <form action="" id="form" class="section daftar-layanan">
+    <form action="" method="POST" id="form" class="section daftar-layanan">
         <!-- Identitas -->
         <div class="wrapper identitas active">
             <div class="item">
@@ -31,7 +31,7 @@
 
             <!-- Button -->
             <div id="grup-button" class="single-button horizontal-position">
-                <button type="button" class="button button-next button-main">Cari</button>
+                <button type="submit" class="button button-submit button-main">Cari</button>
             </div>
         </div>
 

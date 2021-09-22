@@ -26,9 +26,9 @@
                 </a>
             </div>
             <div class="column is-6">
-                <a href="<?= base_url('pendaftaransaya') ?>">
+                <a href="<?= base_url('cekpendaftaran') ?>">
                     <div class="box icon"><i class="ri-search-line ri-lg"></i></div>
-                    <p class="text-body-2">Pendaftaran Saya</p>
+                    <p class="text-body-2">Cek Pendaftaran</p>
                 </a>
             </div>
         </div>

@@ -14,7 +14,7 @@
                     <a class="navbar-item" href="<?= base_url('konsultasi') ?>"><h6>Konsultasi Gratis</h6></a>
                     <a class="navbar-item" href="<?= base_url('daftar') ?>"><h6>Daftar Layanan</h6></a>
                     <a class="navbar-item" href="<?= base_url('daftar/pasien_baru') ?>"><h6>Daftar Pasien Baru</h6></a>
-                    <a class="navbar-item" href="<?= base_url('pendaftaransaya') ?>"><h6>Pendaftaran Saya</h6></a>
+                    <a class="navbar-item" href="<?= base_url('cekpendaftaran') ?>"><h6>Cek Pendaftaran</h6></a>
                     <a class="navbar-item" href="<?= base_url() ?>"><h6>Panggil Ambulan</h6></a>
                     <a class="navbar-item" href="<?= base_url() ?>"><h6>Kebijakan Privasi</h6></a>
                     <a class="navbar-item" href="<?= base_url() ?>"><h6>Tentang Kami</h6></a>
