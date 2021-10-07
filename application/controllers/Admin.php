@@ -47,7 +47,7 @@ class Admin extends CI_Controller {
 
 	public function getListPendaftaran()
 	{
-		$data = $this->Admin_model->listTable();
+		$data = $this->Admin_model->listTable("tbl_pendaftaran");
 		return $data;
 	}
 	
