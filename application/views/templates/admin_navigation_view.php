@@ -16,7 +16,7 @@
 				<a class="navbar-item" href="<?= base_url('admin') ?>">Dashboard</a>
 				<a class="navbar-item" href="<?= base_url('pasienlist') ?>">Pasien</a>
 				<a class="navbar-item" href="<?= base_url('dokterlist') ?>">Dokter</a>
-				<a class="navbar-item">Kontak</a>
+				<a class="navbar-item" href="<?= base_url('adminkontak') ?>">Kontak</a>
 			</div>
 
 			<div class="navbar-end">
