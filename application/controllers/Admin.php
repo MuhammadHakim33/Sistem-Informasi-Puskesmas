@@ -13,7 +13,7 @@ class Admin extends CI_Controller {
 		$data["list"] = $this->getListPendaftaran();
 		
 		$this->load->view('templates/admin_header_view', $data);
-		$this->load->view('admin/admin_dashboard_view');
+		$this->load->view('admin/admin_dashboard_view', $data);
 		$this->load->view('templates/admin_footer_view');
 	}
 
