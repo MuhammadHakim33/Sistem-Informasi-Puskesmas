@@ -10,6 +10,7 @@ class Pasienlist extends CI_Controller {
 		$data["list"] = $this->getListPasien();
 		
 		$this->load->view('templates/admin_header_view', $data);
+		$this->load->view('templates/admin_navigation_view');
 		$this->load->view('admin/admin_pasien_view', $data);
 		$this->load->view('templates/admin_footer_view');
 	}
