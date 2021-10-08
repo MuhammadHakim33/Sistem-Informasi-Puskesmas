@@ -6,6 +6,7 @@
 
 <?php if($this->session->flashdata('pesan')) : ?>
     <div class="container notification is-success is-light">
+    <a class="delete" href="<?= base_url('pasienlist/hapusnotif')?>"></a>
         Field Berhasil <?= $this->session->flashdata('pesan') ?>
     </div>
 <?php endif; ?>

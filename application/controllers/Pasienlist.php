@@ -33,5 +33,11 @@ class Pasienlist extends CI_Controller {
 		redirect('pasienlist');
 	}
 
+	public function hapusnotif()
+	{
+		$this->session->sess_destroy();
+		redirect('pasienlist');
+	}
+
 	
 }
