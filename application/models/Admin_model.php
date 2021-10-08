@@ -18,4 +18,12 @@ class Admin_model extends CI_Model {
         $this->db->where('id', $id);
         $this->db->delete($table);
     }
+
+    public function ubahData($table)
+    {
+        $telp =  $this->input->post('telp', true);
+
+        $this->db->where('id', $this->input->post('id'));
+        $this->db->update($table, array('telp' => $telp));
+    }
 }
