@@ -4,10 +4,16 @@
 	</div>
 </section>
 
+<?php if($this->session->flashdata('pesan')) : ?>
+    <div class="container notification is-success is-light">
+        Field Berhasil <?= $this->session->flashdata('pesan') ?>
+    </div>
+<?php endif; ?>
+
 <main class="px-5">
 	<div class="container">
 		<!-- Table -->
-		<div class="table-container mt-5">
+		<div class="table-container mt-1">
 			<table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth mb-6">
 				<thead>
 					<tr>
@@ -44,7 +50,7 @@
                                             <i class="ri-edit-line"></i>
                                         </span>
                                     </a>
-                                    <a class="button is-danger is-light is-small" href="<?= base_url('pasienlist/')?><?= $data["id"] ?>">
+                                    <a class="button is-danger is-light is-small" href="<?= base_url('pasienlist/hapuspasien/')?><?= $data["id"] ?>" onclick="return confirm('Yakin ?')">
                                         <span class="icon is-small">
                                             <i class="ri-delete-bin-line"></i>
                                         </span>

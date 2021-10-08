@@ -2,10 +2,15 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Pasienlist extends CI_Controller {
+	public function __construct()
+    {
+        parent::__construct();
+        $this->load->model('Admin_model');
+		$this->load->library('session');
+
+    }
 	public function index()
 	{
-		$this->load->model('Admin_model');
-
 		$data["title"] = "List Pasien";
 		$data["list"] = $this->getListPasien();
 		
@@ -19,6 +24,13 @@ class Pasienlist extends CI_Controller {
 	{
 		$data = $this->Admin_model->listTable("tbl_pasien");
 		return $data;
+	}
+
+	public function hapusPasien($id)
+	{
+		$this->Admin_model->hapusField('tbl_pasien', $id);
+		$this->session->set_flashdata('pesan', 'Dihapus');
+		redirect('pasienlist');
 	}
 
 	
