@@ -35,14 +35,20 @@ class Adminkontak extends CI_Controller {
 
 	public function ubahKontakWa()
 	{
-		$this->Admin_model->ubahData("tbl_kontak_admin");
+		$telp =  $this->input->post('telp', true);
+		$id = $this->input->post('id');
+
+		$this->Admin_model->updateData("tbl_kontak_admin", $id, ["telp" => $telp]);
 		$this->session->set_flashdata('pesan', 'Whatsapp Berhasil Diubah');
 		redirect('adminkontak');
 	}
 
 	public function ubahkontakAmbulan()
 	{
-		$this->Admin_model->ubahData("tbl_kontak_ambulan");
+		$telp =  $this->input->post('telp', true);
+		$id = $this->input->post('id');
+
+		$this->Admin_model->updateData("tbl_kontak_ambulan", $id, ["telp" => $telp]);
 		$this->session->set_flashdata('pesan', 'Ambulan Berhasil Diubah');
 		redirect('adminkontak');
 	}
