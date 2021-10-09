@@ -20,6 +20,50 @@ class Pasienlist extends CI_Controller {
 		$this->load->view('templates/admin_footer_view');
 	}
 
+	public function edit($id)
+	{
+		$data["title"] = "Edit Pasien";
+
+		$data["pasien"] = $this->Admin_model->getData("tbl_pasien", ["id" => $id]);
+
+		$this->load->view('templates/admin_header_view', $data);
+		$this->load->view('templates/admin_navigation_view');
+		$this->load->view('admin/admin_edit_pasien_view', $data);
+		$this->load->view('templates/admin_footer_view');
+	}
+	
+	public function editPasien()
+	{
+		$id =  $this->input->post('id', true);
+		$nik =  $this->input->post('nik', true);
+		$nama =  $this->input->post('nama', true);
+		$tgl_lahir =  $this->input->post('tgl_lahir', true);
+		$gender =  $this->input->post('gender', true);
+		$telp =  $this->input->post('telp', true);
+		$alamat =  $this->input->post('alamat', true);
+		$provinsi =  $this->input->post('provinsi', true);
+		$kota_kab =  $this->input->post('kota_kab', true);
+		$kecamatan =  $this->input->post('kecamatan', true);
+		$kelurahan =  $this->input->post('kelurahan', true);
+
+		$data = [
+			"nik" => $nik,
+			"nama" => $nama,
+			"tgl_lahir" => $tgl_lahir,
+			"gender" => $gender,
+			"telp" => $telp,
+			"alamat" => $alamat,
+			"provinsi" => $provinsi,
+			"kota_kab" => $kota_kab,
+			"kecamatan" => $kecamatan,
+			"kelurahan" => $kelurahan
+		];
+
+		$this->Admin_model->updateData("tbl_pasien", $id, $data);
+		$this->session->set_flashdata('pesan', 'Data Pasien Berhasil Diubah');
+		redirect('pasienlist');
+	}
+
 	public function getListPasien()
 	{
 		$data = $this->Admin_model->listTable("tbl_pasien");

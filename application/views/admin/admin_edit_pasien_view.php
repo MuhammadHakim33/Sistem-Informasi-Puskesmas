@@ -16,34 +16,35 @@
 	<div class="container">
 		<div class="columns">
 			<div class="column is-6">
-				<form action="" class="card">
+				<form action="<?= base_url('pasienlist/editpasien') ?>" method="POST" class="card">
 					<div class="card-content">
+						<!-- ID Hidden-->
+						<div class="field  is-hidden">
+							<label class="label">ID</label>
+							<div class="control">
+								<input class="input" type="text" name="id" value="<?= $pasien[0]["id"] ?>">
+							</div>
+						</div>
 						<!-- NIK -->
 						<div class="field">
 							<label class="label">NIK</label>
 							<div class="control">
-								<input class="input" type="text" name="nik" value="">
+								<input class="input" type="text" name="nik" value="<?= $pasien[0]["nik"] ?>">
+								<input class="input is-hidden" type="text" name="id" value="<?= $pasien[0]["id"] ?>">
 							</div>
 						</div>
 						<!-- Nama -->
 						<div class="field">
 							<label class="label">Nama</label>
 							<div class="control">
-								<input class="input" type="text" name="nama" value="">
-							</div>
-						</div>
-						<!-- No. Pasien -->
-						<div class="field">
-							<label class="label">No. Pasien</label>
-							<div class="control">
-								<input class="input" type="number" name="number" value="" disabled>
+								<input class="input" type="text" name="nama" value="<?= $pasien[0]["nama"] ?>">
 							</div>
 						</div>
 						<!-- Tanggal Lahir -->
 						<div class="field">
 							<label class="label">Tanggal Lahir</label>
 							<div class="control">
-								<input class="input" type="date" name="tgl_lahir" value="">
+								<input class="input" type="date" name="tgl_lahir" value="<?= $pasien[0]["tgl_lahir"] ?>">
 							</div>
 						</div>
 						<!-- Jenis Kelamin -->
@@ -62,42 +63,42 @@
 						<div class="field">
 							<label class="label">Telp</label>
 							<div class="control">
-								<input class="input" type="tel" name="telp" value="">
+								<input class="input" type="tel" name="telp" value="<?= $pasien[0]["telp"] ?>">
 							</div>
 						</div>
 						<!-- Alamat -->
 						<div class="field">
 							<label class="label">Alamat</label>
 							<div class="control">
-								<input class="input" type="text" name="alamat" value="">
+								<input class="input" type="text" name="alamat" value="<?= $pasien[0]["alamat"] ?>">
 							</div>
 						</div>
 						<!-- Provinsi -->
 						<div class="field">
 							<label class="label">Provinsi</label>
 							<div class="control">
-								<input class="input" type="text" name="provinsi" value="">
+								<input class="input" type="text" name="provinsi" value="<?= $pasien[0]["provinsi"] ?>">
 							</div>
 						</div>
 						<!-- Kota/Kabupaten -->
 						<div class="field">
 							<label class="label">Kota/Kabupaten</label>
 							<div class="control">
-								<input class="input" type="text" name="kota_kab" value="">
+								<input class="input" type="text" name="kota_kab" value="<?= $pasien[0]["kota_kab"] ?>">
 							</div>
 						</div>
 						<!-- Kecamatan -->
 						<div class="field">
 							<label class="label">Kecamatan</label>
 							<div class="control">
-								<input class="input" type="text" name="kecamatan" value="">
+								<input class="input" type="text" name="kecamatan" value="<?= $pasien[0]["kecamatan"] ?>">
 							</div>
 						</div>
 						<!-- Kelurahan -->
 						<div class="field">
 							<label class="label">Kelurahan</label>
 							<div class="control">
-								<input class="input" type="text" name="kelurahan" value="">
+								<input class="input" type="text" name="kelurahan" value="<?= $pasien[0]["kelurahan"] ?>">
 							</div>
 						</div>
 						<!-- Button -->

@@ -13,6 +13,12 @@ class Admin_model extends CI_Model {
         return $data->result_array();
     }
 
+    public function getData($table, $where = null)
+    {
+        $data = $this->db->get_where($table, $where);
+        return $data->result_array();
+    }
+
     public function hapusField($table, $id)
     {
         $this->db->where('id', $id);
@@ -25,5 +31,11 @@ class Admin_model extends CI_Model {
 
         $this->db->where('id', $this->input->post('id'));
         $this->db->update($table, array('telp' => $telp));
+    }
+
+    public function updateData($table, $id, $data)
+    {
+        $this->db->where('id', $id);
+        $this->db->update($table, $data);
     }
 }

@@ -46,7 +46,7 @@
                             </td>
                             <td>
                                 <div class="buttons">
-                                    <a class="button is-info is-light is-small" href="<?= base_url('pasienlist/')?><?= $data["id"] ?>">
+                                    <a class="button is-info is-light is-small" href="<?= base_url('pasienlist/edit/')?><?= $data["id"] ?>">
                                         <span class="icon is-small">
                                             <i class="ri-edit-line"></i>
                                         </span>
