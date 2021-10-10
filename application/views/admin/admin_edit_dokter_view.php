@@ -16,27 +16,34 @@
 	<div class="container">
 		<div class="columns">
 			<div class="column is-6">
-				<form action="" class="card">
+				<form method="post" class="card" action="<?= base_url('dokterlist/editdokter') ?>" enctype="multipart/form-data">
 					<div class="card-content">
+						<!-- iD Hidden -->
+						<div class="field is-hidden">
+							<label class="label">Nama</label>
+							<div class="control">
+								<input class="input" type="text" name="id" value="<?= $dokter[0]["id"] ?>">
+							</div>
+						</div>
 						<!-- Nama -->
 						<div class="field">
 							<label class="label">Nama</label>
 							<div class="control">
-								<input class="input" type="text" name="nama" value="">
+								<input class="input" type="text" name="nama" value="<?= $dokter[0]["nama"] ?>">
 							</div>
 						</div>
 						<!-- Telp -->
 						<div class="field">
 							<label class="label">Telp</label>
 							<div class="control">
-								<input class="input" type="tel" name="telp" value="">
+								<input class="input" type="tel" name="telp" value="<?= $dokter[0]["telp"] ?>">
 							</div>
 						</div>
 						<!-- Desk -->
 						<div class="field">
 							<label class="label">Deskripsi</label>
 							<div class="control">
-								<input class="input" type="text" name="desk" value="">
+								<input class="input" type="text" name="desk" value="<?= $dokter[0]["deskripsi"] ?>">
 							</div>
 						</div>
 						<!-- Status -->
@@ -57,13 +64,13 @@
 							<div class="control">
 								<div class="file">
 									<label class="file-label">
-										<input class="file-input" type="file" name="resume">
+										<input class="file-input" type="file" name="foto" size="20">
 										<span class="file-cta">
 											<span class="file-icon">
 												<i class="ri-upload-cloud-2-line ri-lg"></i>
 											</span>
 											<span class="file-label">
-												Choose a file…
+												Choose a file… 
 											</span>
 										</span>
 									</label>

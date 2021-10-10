@@ -7,7 +7,7 @@
 <?php if($this->session->flashdata('pesan')) : ?>
     <div class="container notification is-success is-light">
 		<a class="delete" href="<?= base_url('dokterlist/hapusnotif')?>"></a>
-        Field Berhasil <?= $this->session->flashdata('pesan') ?>
+        <?= $this->session->flashdata('pesan') ?>
     </div>
 <?php endif; ?>
 
@@ -46,7 +46,7 @@
 							</td>
 							<td>
 								<div class="buttons">
-									<a class="button is-info is-light is-small" href="<?= base_url('dokterlist/')?><?= $data["id"] ?>">
+									<a class="button is-info is-light is-small" href="<?= base_url('dokterlist/edit/')?><?= $data["id"] ?>">
 										<span class="icon is-small">
 											<i class="ri-edit-line"></i>
 										</span>
