@@ -7,6 +7,11 @@ class Adminkontak extends CI_Controller {
         parent::__construct();
         $this->load->model('Admin_model');
 		$this->load->library('session');
+
+		if(empty($this->session->userdata('status'))){
+			$this->session->set_flashdata('pesan', 'Silahkan Login Terlebih Dahulu');
+			redirect(base_url('adminlogin'));
+		}
     }
 
 	public function index()

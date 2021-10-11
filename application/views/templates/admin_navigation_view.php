@@ -22,7 +22,7 @@
 			<div class="navbar-end">
 				<div class="navbar-item">
 					<div class="buttons are-small">
-						<a class="button is-danger is-light">
+						<a class="button is-danger is-light" href="<?= base_url('adminlogin/logout') ?>">
 							<span class="icon">
 								<i class="ri-logout-box-r-line"></i>
 							</span>

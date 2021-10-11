@@ -8,6 +8,11 @@ class Dokterlist extends CI_Controller {
         $this->load->model('Admin_model');
 		$this->load->library('session');
 		$this->load->helper('form');
+
+		if(empty($this->session->userdata('status'))){
+			$this->session->set_flashdata('pesan', 'Silahkan Login Terlebih Dahulu');
+			redirect(base_url('adminlogin'));
+		}
     }
 
 	public function index()

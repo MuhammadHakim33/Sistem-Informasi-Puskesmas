@@ -1,22 +1,31 @@
 <main class="container login">
-	<form class="card">
+	<div class="card">
 		<header class="card-header">
 			<p class="card-header-title">Login Admin Dashboard</p>
 		</header>
 		<div class="card-content">
-			<div class="content">
+			<?php if($this->session->flashdata('pesan')) : ?>
+				<div class="container notification is-danger is-light">
+					<?= $this->session->flashdata('pesan') ?>
+				</div>
+			<?php endif; ?>
+			
+			<form class="content" method="POST" action="<?= base_url('adminlogin') ?>">
+				<!-- Username -->
 				<div class="field">
 					<label class="label">Username</label>
 					<div class="control">
-						<input class="input" type="text" name="usernam">
+						<input class="input" type="text" name="username">
 					</div>
+					<?= form_error('username', '<p class="help is-danger">', '</p>'); ?>
 				</div>
-
+				<!-- Password -->
 				<div class="field">
 					<label class="label">Password</label>
 					<div class="control">
 						<input class="input" type="password" name="password">
 					</div>
+					<?= form_error('password', '<p class="help is-danger">', '</p>'); ?>
 				</div>
 
 				<div class="field">
@@ -24,7 +33,7 @@
 						<button type="submit" class="button is-primary">Login</button>
 					</div>
 				</div>
-			</div>
+			</form>
 		</div>
-	</form>
+	</div>
 </main>

@@ -2,10 +2,20 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admin extends CI_Controller {
+	public function __construct()
+	{
+		parent::__construct();
+		$this->load->model('Admin_model');
+		$this->load->library('session');
+
+		if(empty($this->session->userdata('status'))){
+			$this->session->set_flashdata('pesan', 'Silahkan Login Terlebih Dahulu');
+			redirect(base_url('adminlogin'));
+		}
+	}
+
 	public function index()
 	{
-		$this->load->model('Admin_model');
-
 		$data["title"] = "Admin";
 		$data["pendaftaranToday"] = $this->getPendaftaranToday();
 		$data["pasienBaru"] = $this->getPasienBaru();
@@ -17,6 +27,7 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/admin_dashboard_view', $data);
 		$this->load->view('templates/admin_footer_view');
 	}
+	
 
 	public function getPendaftaranToday()
 	{
