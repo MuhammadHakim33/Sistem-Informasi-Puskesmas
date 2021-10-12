@@ -22,15 +22,6 @@
                <span class="step-2"></span>
            </div>
         </section>
-
-         <!-- Alert -->
-        <?php if(validation_errors()) : ?>
-            <article class="message is-danger mt-5">
-                <div class="message-body p-4">
-                    <?= validation_errors(); ?>
-                </div>
-            </article>
-        <?php endif; ?>
     </header>
 
     <!-- Form -->
@@ -54,6 +45,7 @@
                     <h6>Umum</h6>
                     <p class="text-body-2">Sakit dengan gejala umum.</p>
                 </label>
+                <?= form_error('layanan', '<p class="help is-danger">', '</p>'); ?>
             </div>
 
             <!-- Button -->
@@ -67,14 +59,17 @@
             <div class="item">
                 <label for="nik">NIK Pasien</label>
                 <input class="input" type="text" id="nik" name="nik">
+                <?= form_error('nik', '<p class="help is-danger">', '</p>'); ?>
             </div>
             <div class="item">
                 <label for="nama">Nama Lengkap Pasien</label>
                 <input class="input" type="text" id="nama" name="nama">
+                <?= form_error('nama', '<p class="help is-danger">', '</p>'); ?>
             </div>
             <div class="item">
                 <label for="tgl_kunjungan">Tanggal Kunjungan</label>
                 <input class="input" type="date" id="tgl_kunjungan" name="tgl_kunjungan">
+                <?= form_error('tgl_kunjungan', '<p class="help is-danger">', '</p>'); ?>
             </div>
 
             <!-- Button -->
@@ -84,5 +79,4 @@
             </div>
         </div>
     </form>
-
 </main>

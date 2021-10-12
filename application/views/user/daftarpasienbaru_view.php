@@ -19,15 +19,6 @@
            </div>
         </section>
 
-        <!-- Alert -->
-        <?php if(validation_errors()) : ?>
-            <article class="message is-danger mt-5">
-                <div class="message-body p-4">
-                    <?= validation_errors(); ?>
-                </div>
-            </article>
-        <?php endif; ?>
-
     </header>
     
     <!-- Form -->
@@ -37,14 +28,17 @@
             <div class="item">
                 <label for="nik">NIK</label>
                 <input class="input" type="text" id="nik" name="nik">
+                <?= form_error('nik', '<p class="help is-danger">', '</p>'); ?>
             </div>
             <div class="item">
                 <label for="nama">Nama Lengkap</label>
                 <input class="input" type="text" id="nama" name="nama">
+                <?= form_error('nama', '<p class="help is-danger">', '</p>'); ?>
             </div>
             <div class="item">
                 <label for="telp">Nomor Handphone</label>
                 <input class="input" type="tel" id="telp" name="telp">
+                <?= form_error('telp', '<p class="help is-danger">', '</p>'); ?>
             </div>
             <div class="item">
                 <p>Jenis Kelamin</p>
@@ -66,10 +60,12 @@
                         </label>
                     </div>
                 </div>
+                <?= form_error('gender', '<p class="help is-danger">', '</p>'); ?>
             </div>
             <div class="item">
                 <label for="tgl_lahir">Tanggal Lahir</label>
                 <input class="input" type="date" id="tgl_lahir" name="tgl_lahir">
+                <?= form_error('tgl_lahir', '<p class="help is-danger">', '</p>'); ?>
             </div>
 
             <!-- Button -->
@@ -83,22 +79,27 @@
             <div class="item">
                 <label for="alamat">Alamat</label>
                 <input class="input" type="text" id="alamat" name="alamat">
+                <?= form_error('alamat', '<p class="help is-danger">', '</p>'); ?>
             </div>
             <div class="item">
                 <label for="provinsi">Provinsi</label>
                 <input class="input" type="text" id="provinsi" name="provinsi">
+                <?= form_error('provinsi', '<p class="help is-danger">', '</p>'); ?>
             </div>
             <div class="item">
                 <label for="kota_kab">Kota/Kabupaten</label>
                 <input class="input" type="text" id="kota_kab" name="kota_kab">
+                <?= form_error('kota_kab', '<p class="help is-danger">', '</p>'); ?>
             </div>
             <div class="item">
                 <label for="kecamatan">Kecamatan</label>
                 <input class="input" type="text" id="kecamatan" name="kecamatan">
+                <?= form_error('kecamatan', '<p class="help is-danger">', '</p>'); ?>
             </div>
             <div class="item">
                 <label for="kelurahan">Kelurahan</label>
                 <input class="input" type="text" id="kelurahan" name="kelurahan">
+                <?= form_error('kelurahan', '<p class="help is-danger">', '</p>'); ?>
             </div>
 
             <!-- Button -->

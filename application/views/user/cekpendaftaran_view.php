@@ -22,11 +22,13 @@
         <div class="wrapper identitas active">
             <div class="item">
                 <label for="nik">NIK</label>
-                <input class="input" type="text" id="nik" name="nik" required>
+                <input class="input" type="text" id="nik" name="nik">
+                <?= form_error('nik', '<p class="help is-danger">', '</p>'); ?>
             </div>
             <div class="item">
                 <label for="tgl_kunjungan">Tanggal Kunjungan</label>
-                <input class="input" type="date" id="tgl_kunjungan" name="tgl_kunjungan" required>
+                <input class="input" type="date" id="tgl_kunjungan" name="tgl_kunjungan">
+                <?= form_error('tgl_kunjungan', '<p class="help is-danger">', '</p>'); ?>
             </div>
 
             <!-- Button -->
