@@ -59,7 +59,9 @@ class Admin extends CI_Controller {
 
 	public function getListPendaftaran()
 	{
-		$data = $this->Admin_model->listTable("tbl_pendaftaran");
+		$today = date("Y-m-d");
+
+		$data = $this->Admin_model->getData("tbl_pendaftaran", ["tgl_booking >=" => $today]);
 		return $data;
 	}
 	
