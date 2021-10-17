@@ -4,9 +4,9 @@
 			<p class="card-header-title">Login Admin Dashboard</p>
 		</header>
 		<div class="card-content">
-			<?php if($this->session->flashdata('pesan')) : ?>
+			<?php if($this->session->flashdata('pesanLogin')) : ?>
 				<div class="container notification is-danger is-light">
-					<?= $this->session->flashdata('pesan') ?>
+					<?= $this->session->flashdata('pesanLogin') ?>
 				</div>
 			<?php endif; ?>
 			

@@ -4,10 +4,10 @@
 	</div>
 </section>
 
-<?php if($this->session->flashdata('pesan')) : ?>
+<?php if($this->session->flashdata('pesanKontakAdmin')) : ?>
     <div class="container notification is-success is-light">
     <a class="delete" href="<?= base_url('adminkontak/hapusnotif')?>"></a>
-        Kontak <?= $this->session->flashdata('pesan') ?>
+        Kontak <?= $this->session->flashdata('pesanKontakAdmin') ?>
     </div>
 <?php endif; ?>
 

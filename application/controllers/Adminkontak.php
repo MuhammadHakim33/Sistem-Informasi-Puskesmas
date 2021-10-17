@@ -9,7 +9,7 @@ class Adminkontak extends CI_Controller {
 		$this->load->library('session');
 
 		if(empty($this->session->userdata('status'))){
-			$this->session->set_flashdata('pesan', 'Silahkan Login Terlebih Dahulu');
+			$this->session->set_flashdata('pesanLogin', 'Silahkan Login Terlebih Dahulu');
 			redirect(base_url('adminlogin'));
 		}
     }
@@ -44,7 +44,7 @@ class Adminkontak extends CI_Controller {
 		$id = $this->input->post('id');
 
 		$this->Admin_model->updateData("tbl_kontak_admin", $id, ["telp" => $telp]);
-		$this->session->set_flashdata('pesan', 'Whatsapp Berhasil Diubah');
+		$this->session->set_flashdata('pesanKontakAdmin', 'Whatsapp Berhasil Diubah');
 		redirect('adminkontak');
 	}
 
@@ -54,7 +54,7 @@ class Adminkontak extends CI_Controller {
 		$id = $this->input->post('id');
 
 		$this->Admin_model->updateData("tbl_kontak_ambulan", $id, ["telp" => $telp]);
-		$this->session->set_flashdata('pesan', 'Ambulan Berhasil Diubah');
+		$this->session->set_flashdata('pesanKontakAdmin', 'Ambulan Berhasil Diubah');
 		redirect('adminkontak');
 	}
 

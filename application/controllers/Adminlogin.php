@@ -42,7 +42,7 @@ class Adminlogin extends CI_Controller {
 				redirect("admin");
 	
 			} else {
-				$this->session->set_flashdata('pesan', 'Username / Password Salah');
+				$this->session->set_flashdata('pesanLogin', 'Username / Password Salah');
 				redirect('adminlogin');
 			}
 		}

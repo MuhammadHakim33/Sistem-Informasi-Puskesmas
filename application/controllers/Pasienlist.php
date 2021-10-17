@@ -9,7 +9,7 @@ class Pasienlist extends CI_Controller {
 		$this->load->library('session');
 
 		if(empty($this->session->userdata('status'))){
-			$this->session->set_flashdata('pesan', 'Silahkan Login Terlebih Dahulu');
+			$this->session->set_flashdata('pesanLogin', 'Silahkan Login Terlebih Dahulu');
 			redirect(base_url('adminlogin'));
 		}
     }
@@ -65,7 +65,7 @@ class Pasienlist extends CI_Controller {
 		];
 
 		$this->Admin_model->updateData("tbl_pasien", $id, $data);
-		$this->session->set_flashdata('pesan', 'Data Pasien Berhasil Diubah');
+		$this->session->set_flashdata('pesanPasienList', 'Data Pasien Berhasil Diubah');
 		redirect('pasienlist');
 	}
 
@@ -78,7 +78,7 @@ class Pasienlist extends CI_Controller {
 	public function hapusPasien($id)
 	{
 		$this->Admin_model->hapusField('tbl_pasien', $id);
-		$this->session->set_flashdata('pesan', 'Dihapus');
+		$this->session->set_flashdata('pesanPasienList', 'Dihapus');
 		redirect('pasienlist');
 	}
 

@@ -10,7 +10,7 @@ class Dokterlist extends CI_Controller {
 		$this->load->helper('form');
 
 		if(empty($this->session->userdata('status'))){
-			$this->session->set_flashdata('pesan', 'Silahkan Login Terlebih Dahulu');
+			$this->session->set_flashdata('pesanLogin', 'Silahkan Login Terlebih Dahulu');
 			redirect(base_url('adminlogin'));
 		}
     }
@@ -62,7 +62,7 @@ class Dokterlist extends CI_Controller {
 	
 			if (!$this->upload->do_upload('foto')){
 				$data['error'] = $this->upload->display_errors();
-				$this->session->set_flashdata('pesan', $data['error']);
+				$this->session->set_flashdata('pesanDokterList', $data['error']);
 				redirect('dokterlist');
 				die();
 	
@@ -82,7 +82,7 @@ class Dokterlist extends CI_Controller {
 		];
 
 		$this->Admin_model->updateData("tbl_dokter", $id, $data);
-		$this->session->set_flashdata('pesan', 'Data Dokter Berhasil Diubah');
+		$this->session->set_flashdata('pesanDokterList', 'Data Dokter Berhasil Diubah');
 		redirect('dokterlist');
 	}
 
@@ -95,7 +95,7 @@ class Dokterlist extends CI_Controller {
 	public function hapusDokter($id)
 	{
 		$this->Admin_model->hapusField('tbl_dokter', $id);
-		$this->session->set_flashdata('pesan', 'Data Dokter Dihapus', 10);
+		$this->session->set_flashdata('pesanDokterList', 'Data Dokter Dihapus', 10);
 		redirect('dokterlist');
 	}
 
