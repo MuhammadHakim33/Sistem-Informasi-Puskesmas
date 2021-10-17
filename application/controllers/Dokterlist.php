@@ -95,13 +95,13 @@ class Dokterlist extends CI_Controller {
 	public function hapusDokter($id)
 	{
 		$this->Admin_model->hapusField('tbl_dokter', $id);
-		$this->session->set_flashdata('pesanDokterList', 'Data Dokter Dihapus', 10);
+		$this->session->set_flashdata('pesanDokterList', 'Data Dokter Dihapus');
 		redirect('dokterlist');
 	}
 
 	public function hapusnotif()
 	{
-		$this->session->sess_destroy();
+		$this->session->unset_userdata('pesanDokterList');
 		redirect('dokterlist');
 	}
 

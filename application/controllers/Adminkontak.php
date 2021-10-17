@@ -60,7 +60,7 @@ class Adminkontak extends CI_Controller {
 
 	public function hapusnotif()
 	{
-		$this->session->sess_destroy();
+		$this->session->unset_userdata('pesanKontakAdmin');
 		redirect('adminkontak');
 	}
 

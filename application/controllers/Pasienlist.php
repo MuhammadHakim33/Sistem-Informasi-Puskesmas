@@ -84,7 +84,7 @@ class Pasienlist extends CI_Controller {
 
 	public function hapusnotif()
 	{
-		$this->session->sess_destroy();
+		$this->session->unset_userdata('pesanPasienList');
 		redirect('pasienlist');
 	}
 
