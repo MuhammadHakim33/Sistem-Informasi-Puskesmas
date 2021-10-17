@@ -28,13 +28,13 @@ class Adminkontak extends CI_Controller {
 
 	public function getKontakAdmin()
 	{
-		$data = $this->Admin_model->listTable("tbl_kontak_admin");
+		$data = $this->Admin_model->getData("tbl_kontak_admin");
         return $data[0];
 	}
 
 	public function getKontakAmbulan()
 	{
-		$data = $this->Admin_model->listTable("tbl_kontak_ambulan");
+		$data = $this->Admin_model->getData("tbl_kontak_ambulan");
         return $data[0];
 	}
 

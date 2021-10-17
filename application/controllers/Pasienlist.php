@@ -71,7 +71,7 @@ class Pasienlist extends CI_Controller {
 
 	public function getListPasien()
 	{
-		$data = $this->Admin_model->listTable("tbl_pasien");
+		$data = $this->Admin_model->getData("tbl_pasien");
 		return $data;
 	}
 

@@ -88,7 +88,7 @@ class Dokterlist extends CI_Controller {
 
 	public function getListDokter()
 	{
-		$data = $this->Admin_model->listTable("tbl_dokter");
+		$data = $this->Admin_model->getData("tbl_dokter");
 		return $data;
 	}
 

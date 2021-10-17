@@ -7,12 +7,6 @@ class Admin_model extends CI_Model {
         return $data->num_rows();
     }
 
-    public function listTable($table)
-    {
-        $data = $this->db->get($table);
-        return $data->result_array();
-    }
-
     public function getData($table, $where = null)
     {
         $data = $this->db->get_where($table, $where);
