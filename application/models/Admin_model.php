@@ -19,6 +19,16 @@ class Admin_model extends CI_Model {
         return $data->result_array();
     }
 
+    public function getDataSearch($table, $where, $keyword )
+    {
+        $this->db->like('nama_pasien', $keyword);
+        $this->db->or_like('nik_pasien', $keyword);
+        $this->db->or_like('kode_booking', $keyword);
+        $this->db->where($where);
+        $data = $this->db->get($table);
+        return $data->result_array();
+    }
+
     public function hapusField($table, $id)
     {
         $this->db->where('id', $id);

@@ -60,9 +60,14 @@ class Admin extends CI_Controller {
 	public function getListPendaftaran()
 	{
 		$today = date("Y-m-d");
+		if($this->input->post('keyword')){
+			$keyword = $this->input->post('keyword');
+			$data = $this->Admin_model->getDataSearch("tbl_pendaftaran", ["tgl_booking >=" => $today], $keyword);
+		} else {
+			$data = $this->Admin_model->getData("tbl_pendaftaran", ["tgl_booking >=" => $today]);
+		}
 
-		$data = $this->Admin_model->getData("tbl_pendaftaran", ["tgl_booking >=" => $today]);
 		return $data;
 	}
-	
+
 }

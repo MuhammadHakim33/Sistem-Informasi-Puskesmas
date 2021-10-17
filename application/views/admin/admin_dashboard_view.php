@@ -41,8 +41,21 @@
 			</div>
 		</div>
 		<!-- Table -->
-		<div class="table-container mt-5">
-			<h4 class="title is-4">List Pendaftran</h4>
+		<div class="table-container mt-6">
+			<div class="columns mx-0">
+				<!-- Title -->
+				<div class="column is-6">
+					<h4 class="title is-4">List Pendaftran</h4>
+				</div>
+				<!-- Search -->
+				<form action="<?= base_url('admin') ?>" method="POST" class="column is-6 is-flex">
+					<input class="input mr-3" type="text" name="keyword" placeholder="Cari NIK, Nama, Kode Booking" autofocus>
+					<div class="control">
+						<button type="submit" class="button is-primary" name="cari"><i class="ri-search-line"></i></button>
+					</div>
+				</form>
+			</div>
+			<!-- Table -->
 			<table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth mb-6">
 				<thead>
 					<tr>
