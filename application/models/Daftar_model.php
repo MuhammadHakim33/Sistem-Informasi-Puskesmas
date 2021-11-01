@@ -80,4 +80,10 @@ class Daftar_model extends CI_Model {
         $data = $this->db->get_where($table, $where);
         return $data->result_array();
     }
+
+    public function getRows($table, $where = null)
+    {
+        $data = $this->db->get_where($table, $where);
+        return $data->num_rows();
+    }
 }

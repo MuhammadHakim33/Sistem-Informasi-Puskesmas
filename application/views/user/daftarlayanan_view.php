@@ -21,7 +21,15 @@
                <span class="step-1"></span>
                <span class="step-2"></span>
            </div>
+
+           <?php if($this->session->flashdata('pesanDaftar')) : ?>
+               <div class="container notification is-danger is-light mt-5">
+               <a class="delete" href="<?= base_url('daftar/hapusnotif')?>"></a>
+                <?= $this->session->flashdata('pesanDaftar') ?>
+               </div>
+           <?php endif; ?>
         </section>
+
     </header>
 
     <!-- Form -->
