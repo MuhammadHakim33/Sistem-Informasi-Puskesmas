@@ -1,6 +1,6 @@
 <main>
 
-    
+    <?php var_dump($getPendaftaran[0]) ?>
 
     <header id="page-header" class="section daftar-sukses">
         <!-- Icon -->
@@ -23,7 +23,7 @@
             </div>
             <div class="column is-12">
                 <h6>Jenis layanan</h6>
-                <p><?= $getPendaftaran[0]['layanan']; ?></</p>
+                <p><?= $getPendaftaran[0]['nama_layanan']; ?></</p>
             </div>
             <div class="column is-12">
                 <h6>Hadir Pada</h6>

@@ -30,23 +30,18 @@
         <div class="wrapper list-layanan active">
             <p>Jenis Layanan</p>
             <!-- Item -->
-            <div class="item">
-                <input type="radio" name="layanan" id="gigi" value="gigi">
-                <label for="gigi" class="form-check-label">
-                    <span class="dot"></span>
-                    <h6>Gigi</h6>
-                    <p class="text-body-2">Pemeriksaan dan penyembuhan gigi.</p>
-                </label>
-            </div>
-            <div class="item">
-                <input type="radio" name="layanan" id="umum" value="umum">
-                <label for="umum" class="form-check-label">
-                    <span class="dot"></span>
-                    <h6>Umum</h6>
-                    <p class="text-body-2">Sakit dengan gejala umum.</p>
-                </label>
-                <?= form_error('layanan', '<p class="help is-danger">', '</p>'); ?>
-            </div>
+            <?php foreach($list_layanan as $list): ?>
+                <div class="item">
+                    <input type="radio" name="layanan" id='<?= $list["nama_layanan"] ?>' value='<?= $list["id"] ?>'>
+                    <label for='<?= $list["nama_layanan"] ?>' class="form-check-label">
+                        <span class="dot"></span>
+                        <h6 class="is-capitalized"><?= $list["nama_layanan"] ?></h6>
+                        <p class="text-body-2 is-capitalized"><?= $list["keterangan"] ?></p>
+                    </label>
+                </div>
+            <?php endforeach; ?>
+            
+            <?= form_error('layanan', '<p class="help is-danger">', '</p>'); ?>
 
             <!-- Button -->
             <div id="grup-button" class="single-button horizontal-position">

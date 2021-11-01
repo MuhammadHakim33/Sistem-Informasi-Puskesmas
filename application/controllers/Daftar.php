@@ -12,6 +12,7 @@ class Daftar extends CI_Controller {
 	public function index()
 	{
 		$data["title"] = "Daftar Layanan";
+		$data["list_layanan"] = $this->Daftar_model->getData('tbl_layanan', ["status_aktif" => 1]);
 
 		$this->form_validation->set_rules('layanan', 'Layanan', 'required');
 		$this->form_validation->set_rules('nik', 'NIK', 'required');
@@ -21,7 +22,7 @@ class Daftar extends CI_Controller {
 		if($this->form_validation->run() == FALSE) {
 			$this->load->view('templates/header_view', $data);
 			$this->load->view('templates/navigation_view');
-			$this->load->view('user/daftarlayanan_view');
+			$this->load->view('user/daftarlayanan_view', $data);
 			$this->load->view('templates/footer_view');;
 		} else {
 			$kode_booking = $this->Daftar_model->daftar_layanan();

@@ -44,7 +44,7 @@ class Daftar_model extends CI_Model {
         $data = [
             'nik_pasien' => $nik,
             'nama_pasien' => $nama,
-            'layanan' => $layanan,
+            'id_layanan' => $layanan,
             'no_antri' => $no_antri,
             'kode_booking' => $kode_boking,
             'tgl_kunjungan' => $tgl_kunjungan
@@ -58,7 +58,7 @@ class Daftar_model extends CI_Model {
 
     public function createAntrian($layanan, $tgl_kunjungan) 
     {
-        $query = $this->db->get_where('tbl_pendaftaran', array('layanan' => $layanan, 'tgl_kunjungan' => $tgl_kunjungan));
+        $query = $this->db->get_where('tbl_pendaftaran', array('id_layanan' => $layanan, 'tgl_kunjungan' => $tgl_kunjungan));
         $result = $query->result_array();
         count($result) == 0 ? $i = 0 : $i = end($result)["no_antri"];
         return $no_antri = $i + 1;
@@ -66,7 +66,12 @@ class Daftar_model extends CI_Model {
 
     public function getPendaftaran($kode_boking) 
     {
-        $query = $this->db->get_where('tbl_pendaftaran', array('kode_booking' => $kode_boking));
+        $this->db->select('*');
+        $this->db->from('tbl_pendaftaran');
+        $this->db->join('tbl_layanan', 'tbl_layanan.id = tbl_pendaftaran.id_layanan');
+        $this->db->where('kode_booking', $kode_boking); 
+        $query = $this->db->get();
+
         return $query->result_array();
     }
 
@@ -77,7 +82,18 @@ class Daftar_model extends CI_Model {
             'tgl_kunjungan' => $this->input->post('tgl_kunjungan', true)
         ];
 
-        $query = $this->db->get_where('tbl_pendaftaran', $data);
+        $this->db->select('*');
+        $this->db->from('tbl_pendaftaran');
+        $this->db->join('tbl_layanan', 'tbl_layanan.id = tbl_pendaftaran.id_layanan');
+        $this->db->where($data); 
+        $query = $this->db->get();
+
         return $query->result_array();
+    }
+
+    public function getData($table, $where = null)
+    {
+        $data = $this->db->get_where($table, $where);
+        return $data->result_array();
     }
 }
