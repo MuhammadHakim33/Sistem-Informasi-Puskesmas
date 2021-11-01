@@ -13,14 +13,21 @@ class Admin_model extends CI_Model {
         return $data->result_array();
     }
 
-    public function getDataSearch($table, $where, $keyword )
+    public function getDataJoin($tableFrom, $tableJoin, $on, $where = null, $keyword = null, $search = false)
     {
-        $this->db->like('nama_pasien', $keyword);
-        $this->db->or_like('nik_pasien', $keyword);
-        $this->db->or_like('kode_booking', $keyword);
-        $this->db->where($where);
-        $data = $this->db->get($table);
-        return $data->result_array();
+        if ($search) {
+            $this->db->like('nama_pasien', $keyword);
+            $this->db->or_like('nik_pasien', $keyword);
+            $this->db->or_like('kode_booking', $keyword);
+        }
+
+        $this->db->select('*');
+        $this->db->from($tableFrom);
+        $this->db->join($tableJoin, $on);
+        $this->db->where($where); 
+        $query = $this->db->get();
+
+        return $query->result_array();
     }
 
     public function hapusField($table, $id)

@@ -73,7 +73,7 @@
 						<tr>
 							<td><?= $data["nik_pasien"] ?></td>
 							<td><?= $data["nama_pasien"] ?></td>
-							<td class="is-capitalized"><?= $data["layanan"] ?></td>
+							<td class="is-capitalized"><?= $data["nama_layanan"] ?></td>
 							<td><?= $data["no_antri"] ?></td>
 							<td><?= $data["kode_booking"] ?></td>
 							<td><?= $data["tgl_kunjungan"] ?></td>

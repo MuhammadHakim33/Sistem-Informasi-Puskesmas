@@ -62,9 +62,9 @@ class Admin extends CI_Controller {
 		$today = date("Y-m-d");
 		if($this->input->post('keyword')){
 			$keyword = $this->input->post('keyword');
-			$data = $this->Admin_model->getDataSearch("tbl_pendaftaran", ["tgl_booking >=" => $today], $keyword);
+			$data = $this->Admin_model->getDataJoin("tbl_pendaftaran", "tbl_layanan", "tbl_layanan.id = tbl_pendaftaran.id_layanan", ["tbl_pendaftaran.tgl_booking >=" => $today], $keyword, true);
 		} else {
-			$data = $this->Admin_model->getData("tbl_pendaftaran", ["tgl_booking >=" => $today]);
+			$data = $this->Admin_model->getDataJoin("tbl_pendaftaran", "tbl_layanan", "tbl_layanan.id = tbl_pendaftaran.id_layanan", ["tbl_pendaftaran.tgl_booking >=" => $today]);
 		}
 
 		return $data;
