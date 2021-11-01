@@ -17,8 +17,14 @@ class Cekpendaftaran extends CI_Controller {
 			$this->load->view('user/cekpendaftaran_view');
 			$this->load->view('templates/footer_view');
 		} else {
-			$data['getPendaftaran'] = $this->Daftar_model->cekPendaftaran();
 			$data["title"] = "Sukses";
+
+			$where = [
+				'nik_pasien' => $this->input->post('nik', true),
+				'tgl_kunjungan' => $this->input->post('tgl_kunjungan', true)
+			];
+			$data['getPendaftaran'] = $this->Daftar_model->getDataJoin("tbl_pendaftaran", "tbl_layanan", "tbl_layanan.id = tbl_pendaftaran.id_layanan", $where);
+			
 			$this->load->view('templates/header_view', $data);
 
 			if(count($data['getPendaftaran']) == 0 ) {

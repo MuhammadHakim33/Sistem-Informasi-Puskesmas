@@ -26,7 +26,7 @@ class Daftar extends CI_Controller {
 			$this->load->view('templates/footer_view');;
 		} else {
 			$kode_booking = $this->Daftar_model->daftar_layanan();
-			$data['getPendaftaran'] = $this->Daftar_model->getPendaftaran($kode_booking);
+			$data['getPendaftaran'] = $this->Daftar_model->getDataJoin("tbl_pendaftaran", "tbl_layanan", "tbl_layanan.id = tbl_pendaftaran.id_layanan", ["tbl_pendaftaran.kode_booking >=" => $kode_booking]);
 			$data["title"] = "Sukses";
 			$this->load->view('templates/header_view', $data);
 			$this->load->view('user/daftarsukses_view', $data);

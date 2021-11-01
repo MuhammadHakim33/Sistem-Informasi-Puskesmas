@@ -1,7 +1,5 @@
 <main>
 
-    <?php var_dump($getPendaftaran[0]) ?>
-
     <header id="page-header" class="section daftar-sukses">
         <!-- Icon -->
         <figure id="icon" class="sukses-icon" >

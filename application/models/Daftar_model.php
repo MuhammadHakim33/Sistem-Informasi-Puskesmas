@@ -64,28 +64,12 @@ class Daftar_model extends CI_Model {
         return $no_antri = $i + 1;
     }
 
-    public function getPendaftaran($kode_boking) 
+    public function getDataJoin($tableFrom, $tableJoin, $on, $where = null)
     {
         $this->db->select('*');
-        $this->db->from('tbl_pendaftaran');
-        $this->db->join('tbl_layanan', 'tbl_layanan.id = tbl_pendaftaran.id_layanan');
-        $this->db->where('kode_booking', $kode_boking); 
-        $query = $this->db->get();
-
-        return $query->result_array();
-    }
-
-    public function cekPendaftaran() 
-    {
-        $data = [
-            'nik_pasien' => $this->input->post('nik', true),
-            'tgl_kunjungan' => $this->input->post('tgl_kunjungan', true)
-        ];
-
-        $this->db->select('*');
-        $this->db->from('tbl_pendaftaran');
-        $this->db->join('tbl_layanan', 'tbl_layanan.id = tbl_pendaftaran.id_layanan');
-        $this->db->where($data); 
+        $this->db->from($tableFrom);
+        $this->db->join($tableJoin, $on);
+        $this->db->where($where); 
         $query = $this->db->get();
 
         return $query->result_array();
