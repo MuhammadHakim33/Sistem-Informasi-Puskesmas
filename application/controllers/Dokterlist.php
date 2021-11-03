@@ -22,7 +22,7 @@ class Dokterlist extends CI_Controller {
 		
 		$this->load->view('templates/admin_header_view', $data);
 		$this->load->view('templates/admin_navigation_view');
-		$this->load->view('admin/admin_Dokter_view');
+		$this->load->view('admin/admin_dokter_view');
 		$this->load->view('templates/admin_footer_view');
 	}
 
