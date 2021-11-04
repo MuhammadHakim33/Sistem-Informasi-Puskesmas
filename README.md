@@ -6,10 +6,11 @@ Tech-Stack: Codeigniter 3, Bulma, Jquery, SwiperJs \
 Icon: https://remixicon.com/ \
 API Covid-19 Tracking: https://kawalcorona.com/api/ \
 API Indonesia News: https://github.com/renomureza/api-berita-indonesia \
-Demo: https://puskesmasjabar.000webhostapp.com/ \
+Demo: https://puskesmasjabar.000webhostapp.com/ 
 
 
-Learning Outcome: \
+Learning Outcome: 
+
     1. Get data from API 
     2. Exploring Codeigniter 3
     3. Clean Code Implementation 
