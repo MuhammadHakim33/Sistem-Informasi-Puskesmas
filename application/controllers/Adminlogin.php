@@ -9,9 +9,13 @@ class Adminlogin extends CI_Controller {
 		$this->load->model('Admin_model');
 		$this->load->library('session');
 	}
-
+	
 	public function index()
 	{
+		if($this->session->userdata('status')){
+			redirect(base_url('admin'));
+		}
+
 		// Form Validasi
 		$this->form_validation->set_rules('username', 'Username', 'required');
 		$this->form_validation->set_rules('password', 'Password', 'required');
