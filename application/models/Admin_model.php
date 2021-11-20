@@ -30,6 +30,10 @@ class Admin_model extends CI_Model {
         return $query->result_array();
     }
 
+    public function insertData($table, $data) {
+        $this->db->insert($table, $data);
+    }
+
     public function hapusField($table, $id)
     {
         $this->db->where('id', $id);

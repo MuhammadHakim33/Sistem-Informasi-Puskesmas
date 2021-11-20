@@ -1,6 +1,14 @@
 <section class="p-5">
 	<div class="container is-flex is-align-items-center is-justify-content-space-between">
+		<!-- Title -->
 		<h4 class="title is-4 mb-0">Daftar Dokter</h4>
+		<!-- Button -->
+		<a class="button is-success" href="<?= base_url('dokterlist/tambah')?>">
+			<span class="icon is-small">
+				<i class="ri-add-line"></i>
+			</span>
+			<span>Tambah Dokter</span>
+		</a>
 	</div>
 </section>
 
