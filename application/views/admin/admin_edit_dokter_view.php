@@ -16,7 +16,7 @@
 	<div class="container">
 		<div class="columns">
 			<div class="column is-6">
-				<form method="post" class="card" action="<?= base_url('dokterlist/editdokter') ?>" enctype="multipart/form-data">
+				<form method="post" class="card" action="<?= base_url('dokterlist/edit') ?>" enctype="multipart/form-data">
 					<div class="card-content">
 						<!-- iD Hidden -->
 						<div class="field is-hidden">
