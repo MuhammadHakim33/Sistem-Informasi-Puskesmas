@@ -17,6 +17,7 @@
 				<a class="navbar-item" href="<?= base_url('pasienlist') ?>">Pasien</a>
 				<a class="navbar-item" href="<?= base_url('dokterlist') ?>">Dokter</a>
 				<a class="navbar-item" href="<?= base_url('adminkontak') ?>">Kontak</a>
+				<a class="navbar-item" href="<?= base_url('layanan') ?>">Layanan</a>
 			</div>
 
 			<div class="navbar-end">
