@@ -34,6 +34,13 @@
         </div>
     </nav>
 
+    <?php if($api_covid == false) 
+        $api_covid[0]["positif"] = 0;
+        $api_covid[0]["dirawat"] = 0;
+        $api_covid[0]["sembuh"] = 0;
+        $api_covid[0]["meninggal"] = 0;
+    ?>
+
     <!-- Tracker -->
     <section id="tracker" class="section">
         <div class="columns is-multiline is-variable is-2">
